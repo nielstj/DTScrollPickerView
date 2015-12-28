@@ -1,15 +1,15 @@
 {
   "name": "DTScrollPickerView",
   "version": "0.1.0",
-  "summary": "A short description of DTScrollPickerView.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DTScrollPickerView",
+  "summary": "A custom scroll picker view",
+  "description": "Custom scroll picker view, subclass from UITableView with UICircleProgressView dependency",
+  "homepage": "https://github.com/nielstj/DTScrollPickerView",
   "license": "MIT",
   "authors": {
     "Daniel Tjuatja": "daniel.tjuatja@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/DTScrollPickerView.git",
+    "git": "https://github.com/nielstj/DTScrollPickerView.git",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -20,6 +20,11 @@
   "resource_bundles": {
     "DTScrollPickerView": [
       "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "DTCircleProgressView": [
+
     ]
   }
 }

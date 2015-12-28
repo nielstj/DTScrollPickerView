@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DTScrollPickerView">
+            <connections>
+                <outlet property="button" destination="csl-El-8DK" id="NvH-0r-Wjp"/>
+                <outlet property="tableView" destination="5uo-UE-t7u" id="JCK-kE-U23"/>
+                <outlet property="verticalConstraint" destination="b2v-gv-HqP" id="5D0-3X-Bwj"/>
+                <outlet property="widthConstraint" destination="3Fx-P7-kMf" id="M4q-BG-fwN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6mq-mK-kcX">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5uo-UE-t7u">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="C7n-ie-MIX"/>
+                        <outlet property="delegate" destination="-1" id="DoY-oT-9DX"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csl-El-8DK" customClass="DTCircleProgressView" customModule="DTCircleProgressView">
+                    <rect key="frame" x="225" y="225" width="150" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="csl-El-8DK" secondAttribute="height" id="9KE-xt-FAZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="csl-El-8DK" firstAttribute="width" secondItem="6mq-mK-kcX" secondAttribute="width" multiplier="1:4" id="3Fx-P7-kMf"/>
+                <constraint firstItem="csl-El-8DK" firstAttribute="centerX" secondItem="6mq-mK-kcX" secondAttribute="centerX" id="89s-A1-l7L"/>
+                <constraint firstAttribute="bottom" secondItem="5uo-UE-t7u" secondAttribute="bottom" id="Npy-vf-yPE"/>
+                <constraint firstItem="5uo-UE-t7u" firstAttribute="top" secondItem="6mq-mK-kcX" secondAttribute="top" id="ai7-OS-Nlc"/>
+                <constraint firstItem="csl-El-8DK" firstAttribute="centerY" secondItem="6mq-mK-kcX" secondAttribute="centerY" id="b2v-gv-HqP"/>
+                <constraint firstAttribute="trailing" secondItem="5uo-UE-t7u" secondAttribute="trailing" id="bzO-Hf-8La"/>
+                <constraint firstItem="5uo-UE-t7u" firstAttribute="leading" secondItem="6mq-mK-kcX" secondAttribute="leading" id="o5g-bh-Bbi"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,6 @@
+framework module DTCircleProgressView {
+  umbrella header "DTCircleProgressView-umbrella.h"
+
+  export *
+  module * { export * }
+}

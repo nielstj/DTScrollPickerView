@@ -7,105 +7,173 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13D118E425AED9AD317673F58F77F158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		1599E1511692E29F59AAE84343E0C839 /* Pods-DTScrollPickerView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBCC59795BB8FEB63DE6F51FE86175BF /* Pods-DTScrollPickerView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CE478357B1BACF609987BCC2A478D96 /* Pods-DTScrollPickerView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C33E091D4BC2A6F5914C6918A507531E /* Pods-DTScrollPickerView_Example-dummy.m */; };
-		370358F6BD915B660B385F4E3BDF5DA0 /* DTScrollPickerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E1B0F41C6CEC5F38A7BFA0015907E74 /* DTScrollPickerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50A82758535FA45DC5B86CCE146C4410 /* Pods-DTScrollPickerView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F527374D4B253FF59F9DF54C8CE485 /* Pods-DTScrollPickerView_Tests-dummy.m */; };
-		6FD03A608CB2894E34B5C07D10325833 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		7149E53EB5623539BBB08D4CC2BEE2CC /* DTScrollPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7809AA8287A4390AD36E3281D97641 /* DTScrollPickerView-dummy.m */; };
-		AB6A002C808094E8273E5E15A61E5EB6 /* DTScrollPickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 960BA929EA38C0634DDDDCA2764B85D4 /* DTScrollPickerView.bundle */; };
-		B43BED64EA72C4BDCF6999D4988DF4B6 /* Pods-DTScrollPickerView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA0A8514A66C4EA959F3CBD069A920B /* Pods-DTScrollPickerView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB69DE5A4A5A782477002E3725621198 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		EDF1AFC6EE99875296BD53343267DA17 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC309C91CA551FBDED354C0F7BB756 /* ReplaceMe.swift */; };
+		1EC424026953480BF38A0D19AA6E42DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0175B8BD846DA85F965CA9D2FB1FDA /* Foundation.framework */; };
+		22B834FD8CAFD2109FDFE196BEAC5CC0 /* DTCircleProgressView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08068C9F59946DBF2378AF9FBDADF713 /* DTCircleProgressView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B3CAC23DB3B683FBD4564FA77E5B6FA /* DTScrollPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7809AA8287A4390AD36E3281D97641 /* DTScrollPickerView-dummy.m */; };
+		2D5D1AF0A623341386E6FE434A413A3A /* Pods-DTScrollPickerView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C33E091D4BC2A6F5914C6918A507531E /* Pods-DTScrollPickerView_Example-dummy.m */; };
+		2F1DEB876CB9B90677136522EEEBC07F /* Pods-DTScrollPickerView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA0A8514A66C4EA959F3CBD069A920B /* Pods-DTScrollPickerView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		493BFF74711EA7AB539B5CE1436C437A /* Pods-DTScrollPickerView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBCC59795BB8FEB63DE6F51FE86175BF /* Pods-DTScrollPickerView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B5EBF829E14DB5F976175C2A646A1ED /* DTScrollMarkerView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 63A97B199FB45D4E0B4FEC1449617BCC /* DTScrollMarkerView.xib */; };
+		89752D45D3371D86B6FA1645316BE4A2 /* DTScrollPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80172D0A558ED7361D4A5DB9506F1407 /* DTScrollPickerView.swift */; };
+		8BA707ED8A1308793DF2FF44A31FFAEB /* DTCircleProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE8DCA837346762F335E01C8EFD0702 /* DTCircleProgressView.framework */; };
+		9D9CA21A45A8698BE1E872CD67BB9238 /* DTCircleProgressView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C474C54E52697840784712E8434EC /* DTCircleProgressView-dummy.m */; };
+		A0B1FEB131FA8F40B2A2745CE14C8124 /* DTScrollPickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D7FBE6F846D42B005CC927D04891125 /* DTScrollPickerView.bundle */; };
+		A78D4DEDEB115FCA3C73344BACAA93A9 /* DTScrollPickerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E1B0F41C6CEC5F38A7BFA0015907E74 /* DTScrollPickerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A88B5AA947107482C42B75CE67D8543D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0175B8BD846DA85F965CA9D2FB1FDA /* Foundation.framework */; };
+		C4C628724C51B29AF00C79DD3E1E487B /* DTCircleProgressView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A99E7720839306CF1B5D89F8DCF1769D /* DTCircleProgressView.bundle */; };
+		C5A63E05C36666B444C275FD3D8A59DA /* UIColor+Crossfade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8184F35F19B9262217286C6F057E5B89 /* UIColor+Crossfade.swift */; };
+		DD29AFAD5C59A5583C0F8200C1D670D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0175B8BD846DA85F965CA9D2FB1FDA /* Foundation.framework */; };
+		DDF2BCC5A4891752097F12F97B93C471 /* DTCircleProgressView.xib in Sources */ = {isa = PBXBuildFile; fileRef = D97A91AECF6579D79450E540AB54923D /* DTCircleProgressView.xib */; };
+		E5CFBE4EDFB8DF0DA5DFD0A436E50A76 /* DTCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A97CA71D5D3850675BA715BFDD54595 /* DTCircleProgressView.swift */; };
+		EEE0983DDD76077C6D890DCE428BCF9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0175B8BD846DA85F965CA9D2FB1FDA /* Foundation.framework */; };
+		FB75E4074A94E7EBCEA43D95813722EE /* DTScrollPickerView.xib in Sources */ = {isa = PBXBuildFile; fileRef = EF33A6582587BD067A0ABD1A98BE4D86 /* DTScrollPickerView.xib */; };
+		FE9773E9D13096C6CC7D90C2F987CEC6 /* Pods-DTScrollPickerView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F527374D4B253FF59F9DF54C8CE485 /* Pods-DTScrollPickerView_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		84366F92B8F8258F02B156830404B12A /* PBXContainerItemProxy */ = {
+		1B6FB8E5C1DF8570852670358EA0E67C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4120756CEB1F3C2F34448B2B1495A116;
+			remoteGlobalIDString = B79A24C3B56403098003B478D62D6B5C;
+			remoteInfo = "DTCircleProgressView-DTCircleProgressView";
+		};
+		2A7D17E5CC5B11D4AFBEA8BB3B6F60E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 907F4C659D626A5D1CBE216C41524491;
 			remoteInfo = DTScrollPickerView;
 		};
-		9DBC4E492779E8BFA3FC9BD01B8468C9 /* PBXContainerItemProxy */ = {
+		5815120704A6AB4E8664404C65861D09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4120756CEB1F3C2F34448B2B1495A116;
+			remoteGlobalIDString = 288AD9B0277C73CDE654D4128F684A8B;
+			remoteInfo = DTCircleProgressView;
+		};
+		6DCC52C81533623A5CFCFB22688B6C31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 288AD9B0277C73CDE654D4128F684A8B;
+			remoteInfo = DTCircleProgressView;
+		};
+		A98F6527733397CB721CDED750322383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 907F4C659D626A5D1CBE216C41524491;
 			remoteInfo = DTScrollPickerView;
 		};
-		BD4C6BE8299B893C25020D5DD678EB02 /* PBXContainerItemProxy */ = {
+		B0D9DB283F52238E207202A3580E5727 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E8D3E183305DEA7467BCACCCFA17FD61;
+			remoteGlobalIDString = 288AD9B0277C73CDE654D4128F684A8B;
+			remoteInfo = DTCircleProgressView;
+		};
+		B13DD1D57A3FD10C8760DCDD851FBAA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 863B47869CA5E69ACA6756765257D557;
 			remoteInfo = "DTScrollPickerView-DTScrollPickerView";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08068C9F59946DBF2378AF9FBDADF713 /* DTCircleProgressView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTCircleProgressView-umbrella.h"; sourceTree = "<group>"; };
+		0CF88F2BC89529158020E00667D7259D /* DTCircleProgressView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DTCircleProgressView.xcconfig; sourceTree = "<group>"; };
+		0D0175B8BD846DA85F965CA9D2FB1FDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0D7FBE6F846D42B005CC927D04891125 /* DTScrollPickerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTScrollPickerView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B897FE1F1C4244CAF5E57CA2EDFF01B /* DTCircleProgressView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DTCircleProgressView.modulemap; sourceTree = "<group>"; };
 		1E1B0F41C6CEC5F38A7BFA0015907E74 /* DTScrollPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTScrollPickerView-umbrella.h"; sourceTree = "<group>"; };
 		2AC79AD225613E1FF1B9FA279803F080 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3D0749E32BF81EDCE08D4DE8BB6BC0EA /* DTScrollPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTScrollPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416E92185EB18907C73F430E6664B6B8 /* DTScrollPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DTScrollPickerView.modulemap; sourceTree = "<group>"; };
 		4515E4E2108C96470333E2E64B61C8CC /* Pods-DTScrollPickerView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DTScrollPickerView_Example.modulemap"; sourceTree = "<group>"; };
-		49AC309C91CA551FBDED354C0F7BB756 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		58B17DA73A75568DC3D8FA43B5A45E18 /* Pods-DTScrollPickerView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DTScrollPickerView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		63A97B199FB45D4E0B4FEC1449617BCC /* DTScrollMarkerView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = DTScrollMarkerView.xib; sourceTree = "<group>"; };
 		644DDDEBD7166E6C5F6590557C9588DD /* Pods-DTScrollPickerView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DTScrollPickerView_Tests.modulemap"; sourceTree = "<group>"; };
 		6911978E9E1FD5897710F1CDEA9A3D0B /* Pods-DTScrollPickerView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTScrollPickerView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6C7809AA8287A4390AD36E3281D97641 /* DTScrollPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DTScrollPickerView-dummy.m"; sourceTree = "<group>"; };
+		6FE8DCA837346762F335E01C8EFD0702 /* DTCircleProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTCircleProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E17255FEB46F218D49CBB29E5800FC0 /* Pods-DTScrollPickerView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DTScrollPickerView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		80172D0A558ED7361D4A5DB9506F1407 /* DTScrollPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DTScrollPickerView.swift; sourceTree = "<group>"; };
+		812C474C54E52697840784712E8434EC /* DTCircleProgressView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DTCircleProgressView-dummy.m"; sourceTree = "<group>"; };
+		8184F35F19B9262217286C6F057E5B89 /* UIColor+Crossfade.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Crossfade.swift"; sourceTree = "<group>"; };
 		85240C87E015F1073B929549A5CD6690 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		870166A5B608100DB5C9FE9AB876E356 /* Pods-DTScrollPickerView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DTScrollPickerView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8CB5C3E22916635BD55458C0AB63F1F9 /* Pods-DTScrollPickerView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTScrollPickerView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		960BA929EA38C0634DDDDCA2764B85D4 /* DTScrollPickerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTScrollPickerView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E86A18AFEB89E3695CC17F7EFAF5AA /* Pods-DTScrollPickerView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DTScrollPickerView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		99027B33787F2B184B484E6888DAAA9B /* Pods-DTScrollPickerView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTScrollPickerView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A97CA71D5D3850675BA715BFDD54595 /* DTCircleProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DTCircleProgressView.swift; path = Pod/Classes/DTCircleProgressView.swift; sourceTree = "<group>"; };
 		9BD984D6C219E14C8ECB2FBB548A6077 /* Pods-DTScrollPickerView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DTScrollPickerView_Tests-resources.sh"; sourceTree = "<group>"; };
+		A64AA2EA7C83E712963333AD71E55808 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99E7720839306CF1B5D89F8DCF1769D /* DTCircleProgressView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTCircleProgressView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFC07B7AC2760B21146E3FB90898D9B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0DD80187278A3B5415FEBF1B0C2C608 /* DTCircleProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTCircleProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96AD929364CD3C467FBC3047DA1FA92 /* Pods-DTScrollPickerView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DTScrollPickerView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C33E091D4BC2A6F5914C6918A507531E /* Pods-DTScrollPickerView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DTScrollPickerView_Example-dummy.m"; sourceTree = "<group>"; };
 		C363F4C1D84ABE569F19D20EE379DFCC /* Pods-DTScrollPickerView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTScrollPickerView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C4F9273F88470591BC2808017297FE2D /* Pods-DTScrollPickerView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DTScrollPickerView_Example-resources.sh"; sourceTree = "<group>"; };
+		CCBFF8A2301E1F00D56C8849105BF539 /* DTCircleProgressView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTCircleProgressView-prefix.pch"; sourceTree = "<group>"; };
 		D1DFDBD40DCF586E47B2823C5D88CDC4 /* Pods-DTScrollPickerView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DTScrollPickerView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		D4D68C8C75C2CD46B614D05DE0878E5F /* Pods_DTScrollPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DTScrollPickerView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F527374D4B253FF59F9DF54C8CE485 /* Pods-DTScrollPickerView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DTScrollPickerView_Tests-dummy.m"; sourceTree = "<group>"; };
-		E2B55D14C22F7C9BDFB8BFEE3488BED2 /* Pods_DTScrollPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DTScrollPickerView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D97A91AECF6579D79450E540AB54923D /* DTCircleProgressView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DTCircleProgressView.xib; path = Pod/Classes/DTCircleProgressView.xib; sourceTree = "<group>"; };
 		E48190380BAC7B62A37848AE6C2C93BF /* DTScrollPickerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTScrollPickerView-prefix.pch"; sourceTree = "<group>"; };
+		EAD85D4862B3394110470C3461DCC1B1 /* Pods_DTScrollPickerView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DTScrollPickerView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA503AF5DE3B9B17103DB632DA8310E /* Pods_DTScrollPickerView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DTScrollPickerView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCC59795BB8FEB63DE6F51FE86175BF /* Pods-DTScrollPickerView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DTScrollPickerView_Example-umbrella.h"; sourceTree = "<group>"; };
+		EF33A6582587BD067A0ABD1A98BE4D86 /* DTScrollPickerView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = DTScrollPickerView.xib; sourceTree = "<group>"; };
 		F9DEBA89BEEEA0C73314C84D57DED420 /* DTScrollPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DTScrollPickerView.xcconfig; sourceTree = "<group>"; };
 		FAA0A8514A66C4EA959F3CBD069A920B /* Pods-DTScrollPickerView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DTScrollPickerView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		FD416C592EE39A05E7D3614660DEAF94 /* DTScrollPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTScrollPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04D80D781211F24B11D9EE8616811F69 /* Frameworks */ = {
+		5C775A0829F4AF04A523ED895D7B101B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13D118E425AED9AD317673F58F77F158 /* Foundation.framework in Frameworks */,
+				1EC424026953480BF38A0D19AA6E42DB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EE6F5235B77870E87EE0FAD10FEF555 /* Frameworks */ = {
+		642B89CFA4039CF569A0E70C122D8007 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD03A608CB2894E34B5C07D10325833 /* Foundation.framework in Frameworks */,
+				A88B5AA947107482C42B75CE67D8543D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE0B9B65C947441F885901E176315C90 /* Frameworks */ = {
+		7AFF4CBBF7B672539D00B1F9F1B8440E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB69DE5A4A5A782477002E3725621198 /* Foundation.framework in Frameworks */,
+				8BA707ED8A1308793DF2FF44A31FFAEB /* DTCircleProgressView.framework in Frameworks */,
+				DD29AFAD5C59A5583C0F8200C1D670D4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F271CFAB49929ACB43175C8AB30AB67B /* Frameworks */ = {
+		E55BADFE5B214C47524CB2B3A8857058 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB6014C1437914FF857F39C07E2D4AC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE0983DDD76077C6D890DCE428BCF9A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F73ACBFD3D0BF548DC7C9EE305340235 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,6 +201,15 @@
 			path = "Target Support Files/Pods-DTScrollPickerView_Tests";
 			sourceTree = "<group>";
 		};
+		2F5141D257C4CFF30ED5C5B8584CA315 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FE8DCA837346762F335E01C8EFD0702 /* DTCircleProgressView.framework */,
+				C8F09C3945C9BF5A43F0B5DD2E25E636 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		30BD082D213D2474EA61D3745565E4EB /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,14 +227,46 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		482AD94A9EC5A18F751D9F782CFFF48A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A99E7720839306CF1B5D89F8DCF1769D /* DTCircleProgressView.bundle */,
+				B0DD80187278A3B5415FEBF1B0C2C608 /* DTCircleProgressView.framework */,
+				0D7FBE6F846D42B005CC927D04891125 /* DTScrollPickerView.bundle */,
+				3D0749E32BF81EDCE08D4DE8BB6BC0EA /* DTScrollPickerView.framework */,
+				EBA503AF5DE3B9B17103DB632DA8310E /* Pods_DTScrollPickerView_Example.framework */,
+				EAD85D4862B3394110470C3461DCC1B1 /* Pods_DTScrollPickerView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B423A1781CE73AE1BFCE4D4F10ADC5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8D82AF0CE2F2AA59EDFF16805EE0ED5 /* DTCircleProgressView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6060F2266CBEF9D82BD22C778994249C /* DTScrollPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				944BCEA20BD54EB6E397548FBD11080E /* Pod */,
+				996CC8CAD70DB7495366CBF9EB27F1F3 /* Pod */,
 				D4ED7460E4ACEFB7141B5276DCD749CF /* Support Files */,
 			);
 			name = DTScrollPickerView;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		6586A9867E2EA16D1C6BBE6D4C8A16B9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63A97B199FB45D4E0B4FEC1449617BCC /* DTScrollMarkerView.xib */,
+				80172D0A558ED7361D4A5DB9506F1407 /* DTScrollPickerView.swift */,
+				EF33A6582587BD067A0ABD1A98BE4D86 /* DTScrollPickerView.xib */,
+				8184F35F19B9262217286C6F057E5B89 /* UIColor+Crossfade.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -165,27 +274,17 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				30BD082D213D2474EA61D3745565E4EB /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				8A43D298E1FA30F964A8012AF3ACB7A3 /* Products */,
+				2F5141D257C4CFF30ED5C5B8584CA315 /* Frameworks */,
+				5B423A1781CE73AE1BFCE4D4F10ADC5E /* Pods */,
+				482AD94A9EC5A18F751D9F782CFFF48A /* Products */,
 				3F2310EC39057ED0C4B1E59E331F2007 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8A43D298E1FA30F964A8012AF3ACB7A3 /* Products */ = {
+		996CC8CAD70DB7495366CBF9EB27F1F3 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				960BA929EA38C0634DDDDCA2764B85D4 /* DTScrollPickerView.bundle */,
-				FD416C592EE39A05E7D3614660DEAF94 /* DTScrollPickerView.framework */,
-				E2B55D14C22F7C9BDFB8BFEE3488BED2 /* Pods_DTScrollPickerView_Example.framework */,
-				D4D68C8C75C2CD46B614D05DE0878E5F /* Pods_DTScrollPickerView_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		944BCEA20BD54EB6E397548FBD11080E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D40EB17A26C7889EAF667C3912EA40EA /* Classes */,
+				6586A9867E2EA16D1C6BBE6D4C8A16B9 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -208,28 +307,26 @@
 			path = "Target Support Files/Pods-DTScrollPickerView_Example";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		B1B105ED6E18C5E0BCBEF6854C603584 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				1B897FE1F1C4244CAF5E57CA2EDFF01B /* DTCircleProgressView.modulemap */,
+				0CF88F2BC89529158020E00667D7259D /* DTCircleProgressView.xcconfig */,
+				812C474C54E52697840784712E8434EC /* DTCircleProgressView-dummy.m */,
+				CCBFF8A2301E1F00D56C8849105BF539 /* DTCircleProgressView-prefix.pch */,
+				08068C9F59946DBF2378AF9FBDADF713 /* DTCircleProgressView-umbrella.h */,
+				A64AA2EA7C83E712963333AD71E55808 /* Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/DTCircleProgressView";
 			sourceTree = "<group>";
 		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+		C8F09C3945C9BF5A43F0B5DD2E25E636 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+				0D0175B8BD846DA85F965CA9D2FB1FDA /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		D40EB17A26C7889EAF667C3912EA40EA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				49AC309C91CA551FBDED354C0F7BB756 /* ReplaceMe.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		D4ED7460E4ACEFB7141B5276DCD749CF /* Support Files */ = {
@@ -246,98 +343,99 @@
 			path = "Example/Pods/Target Support Files/DTScrollPickerView";
 			sourceTree = "<group>";
 		};
+		E8D82AF0CE2F2AA59EDFF16805EE0ED5 /* DTCircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				9A97CA71D5D3850675BA715BFDD54595 /* DTCircleProgressView.swift */,
+				D97A91AECF6579D79450E540AB54923D /* DTCircleProgressView.xib */,
+				B1B105ED6E18C5E0BCBEF6854C603584 /* Support Files */,
+			);
+			path = DTCircleProgressView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		15B93B1FA416A8184795DB024F3CFE0A /* Headers */ = {
+		14DD35E3EE109F2447EB61F5C069E134 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43BED64EA72C4BDCF6999D4988DF4B6 /* Pods-DTScrollPickerView_Tests-umbrella.h in Headers */,
+				2F1DEB876CB9B90677136522EEEBC07F /* Pods-DTScrollPickerView_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDA446AF617D382738404EEF462B0686 /* Headers */ = {
+		3362C3514EA0CC224DE7DC0A510F4A11 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1599E1511692E29F59AAE84343E0C839 /* Pods-DTScrollPickerView_Example-umbrella.h in Headers */,
+				22B834FD8CAFD2109FDFE196BEAC5CC0 /* DTCircleProgressView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB874A8847C2603498D5AFF912E7990E /* Headers */ = {
+		40D50041458C4418C58F21F032748B01 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370358F6BD915B660B385F4E3BDF5DA0 /* DTScrollPickerView-umbrella.h in Headers */,
+				A78D4DEDEB115FCA3C73344BACAA93A9 /* DTScrollPickerView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E51F6B4E28EB7FF278588D66CC0006E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493BFF74711EA7AB539B5CE1436C437A /* Pods-DTScrollPickerView_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1522D6BBD10649EF9E1F88D392DE2505 /* Pods-DTScrollPickerView_Tests */ = {
+		1BC026CF0FACA1A371F0EB8F9389FC8F /* Pods-DTScrollPickerView_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32425F438D1B14260496AAA0B2972322 /* Build configuration list for PBXNativeTarget "Pods-DTScrollPickerView_Tests" */;
+			buildConfigurationList = C49918B828A825B8EF5560CC2B35F658 /* Build configuration list for PBXNativeTarget "Pods-DTScrollPickerView_Tests" */;
 			buildPhases = (
-				36A797490011C93209EA5946E91AF8D3 /* Sources */,
-				1EE6F5235B77870E87EE0FAD10FEF555 /* Frameworks */,
-				15B93B1FA416A8184795DB024F3CFE0A /* Headers */,
+				948CD42B73E80B03402750F2BF6CA7BC /* Sources */,
+				EB6014C1437914FF857F39C07E2D4AC0 /* Frameworks */,
+				14DD35E3EE109F2447EB61F5C069E134 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8271700E83632B0298A6E26477B833BB /* PBXTargetDependency */,
+				8F115309320CC74DDCA28766C419BD80 /* PBXTargetDependency */,
+				055B59B9F14A7A6A2690AD26658FCA70 /* PBXTargetDependency */,
 			);
 			name = "Pods-DTScrollPickerView_Tests";
 			productName = "Pods-DTScrollPickerView_Tests";
-			productReference = D4D68C8C75C2CD46B614D05DE0878E5F /* Pods_DTScrollPickerView_Tests.framework */;
+			productReference = EAD85D4862B3394110470C3461DCC1B1 /* Pods_DTScrollPickerView_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4120756CEB1F3C2F34448B2B1495A116 /* DTScrollPickerView */ = {
+		288AD9B0277C73CDE654D4128F684A8B /* DTCircleProgressView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D64C0B39E74032F4ACAA43332EB68C7A /* Build configuration list for PBXNativeTarget "DTScrollPickerView" */;
+			buildConfigurationList = B5942C7A3EDC63B2328497AB2A7901ED /* Build configuration list for PBXNativeTarget "DTCircleProgressView" */;
 			buildPhases = (
-				58AD0E5888FE482A6E1F3392BAA240DC /* Sources */,
-				EE0B9B65C947441F885901E176315C90 /* Frameworks */,
-				5D681EFC6222FE786994CED45A0FFBD2 /* Resources */,
-				CB874A8847C2603498D5AFF912E7990E /* Headers */,
+				E40AA6434D80E790C66C1A0AF539BF74 /* Sources */,
+				642B89CFA4039CF569A0E70C122D8007 /* Frameworks */,
+				9B67E26D96A5BCE35F1AE5B93EF2CB5B /* Resources */,
+				3362C3514EA0CC224DE7DC0A510F4A11 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AA5929E1DE2E4B345232F290636B2EE6 /* PBXTargetDependency */,
+				54D49A08063A95199202630F81794218 /* PBXTargetDependency */,
 			);
-			name = DTScrollPickerView;
-			productName = DTScrollPickerView;
-			productReference = FD416C592EE39A05E7D3614660DEAF94 /* DTScrollPickerView.framework */;
+			name = DTCircleProgressView;
+			productName = DTCircleProgressView;
+			productReference = B0DD80187278A3B5415FEBF1B0C2C608 /* DTCircleProgressView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		53382A5C42F403D1F5BB274F542C37C9 /* Pods-DTScrollPickerView_Example */ = {
+		863B47869CA5E69ACA6756765257D557 /* DTScrollPickerView-DTScrollPickerView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59E5CCE65CA68323497603D1B9F79F8D /* Build configuration list for PBXNativeTarget "Pods-DTScrollPickerView_Example" */;
+			buildConfigurationList = 023FD513604D5FEBF6DDA678C8C9049C /* Build configuration list for PBXNativeTarget "DTScrollPickerView-DTScrollPickerView" */;
 			buildPhases = (
-				B1630AC68739B1E7F1D8ED7C19725112 /* Sources */,
-				04D80D781211F24B11D9EE8616811F69 /* Frameworks */,
-				BDA446AF617D382738404EEF462B0686 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				35C410E31B3A4E128783E7E08B6AE1BD /* PBXTargetDependency */,
-			);
-			name = "Pods-DTScrollPickerView_Example";
-			productName = "Pods-DTScrollPickerView_Example";
-			productReference = E2B55D14C22F7C9BDFB8BFEE3488BED2 /* Pods_DTScrollPickerView_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E8D3E183305DEA7467BCACCCFA17FD61 /* DTScrollPickerView-DTScrollPickerView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01EFD74258B270EBB861B6A34397002C /* Build configuration list for PBXNativeTarget "DTScrollPickerView-DTScrollPickerView" */;
-			buildPhases = (
-				BDD438001969EE8833428F21C209EF0B /* Sources */,
-				F271CFAB49929ACB43175C8AB30AB67B /* Frameworks */,
-				F707F4E1E3CCB9E15A45D5F7E7DBE283 /* Resources */,
+				FA51F8A5B7C0CF1650C3CB78EEE0E6F6 /* Sources */,
+				F73ACBFD3D0BF548DC7C9EE305340235 /* Frameworks */,
+				72EA5CFF41E5150AC86048B53396FAF9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -345,7 +443,63 @@
 			);
 			name = "DTScrollPickerView-DTScrollPickerView";
 			productName = "DTScrollPickerView-DTScrollPickerView";
-			productReference = 960BA929EA38C0634DDDDCA2764B85D4 /* DTScrollPickerView.bundle */;
+			productReference = 0D7FBE6F846D42B005CC927D04891125 /* DTScrollPickerView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		907F4C659D626A5D1CBE216C41524491 /* DTScrollPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87FBD7C4624F64BC483A4EB988784E58 /* Build configuration list for PBXNativeTarget "DTScrollPickerView" */;
+			buildPhases = (
+				2DFF91B4EE98732592D56D8333DCFFB5 /* Sources */,
+				7AFF4CBBF7B672539D00B1F9F1B8440E /* Frameworks */,
+				5598EEC7ACF0EA52BAA9987B1CD206F5 /* Resources */,
+				40D50041458C4418C58F21F032748B01 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CBF7AABDCADE71F7EAA4B7DBB92180B /* PBXTargetDependency */,
+				1FB562344A526E516D44467BB88524A1 /* PBXTargetDependency */,
+			);
+			name = DTScrollPickerView;
+			productName = DTScrollPickerView;
+			productReference = 3D0749E32BF81EDCE08D4DE8BB6BC0EA /* DTScrollPickerView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		960D3CF4FBE2A58A2880336569D6AC1B /* Pods-DTScrollPickerView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD53890E4740FF83C4F6FFE3007B98B3 /* Build configuration list for PBXNativeTarget "Pods-DTScrollPickerView_Example" */;
+			buildPhases = (
+				651C0D3E0E3223E217709331F3886134 /* Sources */,
+				5C775A0829F4AF04A523ED895D7B101B /* Frameworks */,
+				9E51F6B4E28EB7FF278588D66CC0006E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22BF6EFFE04847113A16BD9E1932D0BD /* PBXTargetDependency */,
+				CD4EF021B41633F610C30BC6DF38E142 /* PBXTargetDependency */,
+			);
+			name = "Pods-DTScrollPickerView_Example";
+			productName = "Pods-DTScrollPickerView_Example";
+			productReference = EBA503AF5DE3B9B17103DB632DA8310E /* Pods_DTScrollPickerView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B79A24C3B56403098003B478D62D6B5C /* DTCircleProgressView-DTCircleProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 596AA5CF6B9785159633A4A8296A2C36 /* Build configuration list for PBXNativeTarget "DTCircleProgressView-DTCircleProgressView" */;
+			buildPhases = (
+				68452A9879D8D198AFB63527A62D8FE9 /* Sources */,
+				E55BADFE5B214C47524CB2B3A8857058 /* Frameworks */,
+				CE482CD4C899601C2957EAE0C140D817 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DTCircleProgressView-DTCircleProgressView";
+			productName = "DTCircleProgressView-DTCircleProgressView";
+			productReference = A99E7720839306CF1B5D89F8DCF1769D /* DTCircleProgressView.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -365,28 +519,45 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8A43D298E1FA30F964A8012AF3ACB7A3 /* Products */;
+			productRefGroup = 482AD94A9EC5A18F751D9F782CFFF48A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4120756CEB1F3C2F34448B2B1495A116 /* DTScrollPickerView */,
-				E8D3E183305DEA7467BCACCCFA17FD61 /* DTScrollPickerView-DTScrollPickerView */,
-				53382A5C42F403D1F5BB274F542C37C9 /* Pods-DTScrollPickerView_Example */,
-				1522D6BBD10649EF9E1F88D392DE2505 /* Pods-DTScrollPickerView_Tests */,
+				288AD9B0277C73CDE654D4128F684A8B /* DTCircleProgressView */,
+				B79A24C3B56403098003B478D62D6B5C /* DTCircleProgressView-DTCircleProgressView */,
+				907F4C659D626A5D1CBE216C41524491 /* DTScrollPickerView */,
+				863B47869CA5E69ACA6756765257D557 /* DTScrollPickerView-DTScrollPickerView */,
+				960D3CF4FBE2A58A2880336569D6AC1B /* Pods-DTScrollPickerView_Example */,
+				1BC026CF0FACA1A371F0EB8F9389FC8F /* Pods-DTScrollPickerView_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5D681EFC6222FE786994CED45A0FFBD2 /* Resources */ = {
+		5598EEC7ACF0EA52BAA9987B1CD206F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6A002C808094E8273E5E15A61E5EB6 /* DTScrollPickerView.bundle in Resources */,
+				A0B1FEB131FA8F40B2A2745CE14C8124 /* DTScrollPickerView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F707F4E1E3CCB9E15A45D5F7E7DBE283 /* Resources */ = {
+		72EA5CFF41E5150AC86048B53396FAF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B67E26D96A5BCE35F1AE5B93EF2CB5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4C628724C51B29AF00C79DD3E1E487B /* DTCircleProgressView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE482CD4C899601C2957EAE0C140D817 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,32 +567,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		36A797490011C93209EA5946E91AF8D3 /* Sources */ = {
+		2DFF91B4EE98732592D56D8333DCFFB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50A82758535FA45DC5B86CCE146C4410 /* Pods-DTScrollPickerView_Tests-dummy.m in Sources */,
+				7B5EBF829E14DB5F976175C2A646A1ED /* DTScrollMarkerView.xib in Sources */,
+				2B3CAC23DB3B683FBD4564FA77E5B6FA /* DTScrollPickerView-dummy.m in Sources */,
+				89752D45D3371D86B6FA1645316BE4A2 /* DTScrollPickerView.swift in Sources */,
+				FB75E4074A94E7EBCEA43D95813722EE /* DTScrollPickerView.xib in Sources */,
+				C5A63E05C36666B444C275FD3D8A59DA /* UIColor+Crossfade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58AD0E5888FE482A6E1F3392BAA240DC /* Sources */ = {
+		651C0D3E0E3223E217709331F3886134 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7149E53EB5623539BBB08D4CC2BEE2CC /* DTScrollPickerView-dummy.m in Sources */,
-				EDF1AFC6EE99875296BD53343267DA17 /* ReplaceMe.swift in Sources */,
+				2D5D1AF0A623341386E6FE434A413A3A /* Pods-DTScrollPickerView_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1630AC68739B1E7F1D8ED7C19725112 /* Sources */ = {
+		68452A9879D8D198AFB63527A62D8FE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CE478357B1BACF609987BCC2A478D96 /* Pods-DTScrollPickerView_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDD438001969EE8833428F21C209EF0B /* Sources */ = {
+		948CD42B73E80B03402750F2BF6CA7BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9773E9D13096C6CC7D90C2F987CEC6 /* Pods-DTScrollPickerView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E40AA6434D80E790C66C1A0AF539BF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9CA21A45A8698BE1E872CD67BB9238 /* DTCircleProgressView-dummy.m in Sources */,
+				E5CFBE4EDFB8DF0DA5DFD0A436E50A76 /* DTCircleProgressView.swift in Sources */,
+				DDF2BCC5A4891752097F12F97B93C471 /* DTCircleProgressView.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA51F8A5B7C0CF1650C3CB78EEE0E6F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,87 +622,54 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		35C410E31B3A4E128783E7E08B6AE1BD /* PBXTargetDependency */ = {
+		055B59B9F14A7A6A2690AD26658FCA70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DTScrollPickerView;
-			target = 4120756CEB1F3C2F34448B2B1495A116 /* DTScrollPickerView */;
-			targetProxy = 9DBC4E492779E8BFA3FC9BD01B8468C9 /* PBXContainerItemProxy */;
+			target = 907F4C659D626A5D1CBE216C41524491 /* DTScrollPickerView */;
+			targetProxy = A98F6527733397CB721CDED750322383 /* PBXContainerItemProxy */;
 		};
-		8271700E83632B0298A6E26477B833BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DTScrollPickerView;
-			target = 4120756CEB1F3C2F34448B2B1495A116 /* DTScrollPickerView */;
-			targetProxy = 84366F92B8F8258F02B156830404B12A /* PBXContainerItemProxy */;
-		};
-		AA5929E1DE2E4B345232F290636B2EE6 /* PBXTargetDependency */ = {
+		1FB562344A526E516D44467BB88524A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "DTScrollPickerView-DTScrollPickerView";
-			target = E8D3E183305DEA7467BCACCCFA17FD61 /* DTScrollPickerView-DTScrollPickerView */;
-			targetProxy = BD4C6BE8299B893C25020D5DD678EB02 /* PBXContainerItemProxy */;
+			target = 863B47869CA5E69ACA6756765257D557 /* DTScrollPickerView-DTScrollPickerView */;
+			targetProxy = B13DD1D57A3FD10C8760DCDD851FBAA4 /* PBXContainerItemProxy */;
+		};
+		22BF6EFFE04847113A16BD9E1932D0BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DTCircleProgressView;
+			target = 288AD9B0277C73CDE654D4128F684A8B /* DTCircleProgressView */;
+			targetProxy = 6DCC52C81533623A5CFCFB22688B6C31 /* PBXContainerItemProxy */;
+		};
+		54D49A08063A95199202630F81794218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DTCircleProgressView-DTCircleProgressView";
+			target = B79A24C3B56403098003B478D62D6B5C /* DTCircleProgressView-DTCircleProgressView */;
+			targetProxy = 1B6FB8E5C1DF8570852670358EA0E67C /* PBXContainerItemProxy */;
+		};
+		8F115309320CC74DDCA28766C419BD80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DTCircleProgressView;
+			target = 288AD9B0277C73CDE654D4128F684A8B /* DTCircleProgressView */;
+			targetProxy = B0D9DB283F52238E207202A3580E5727 /* PBXContainerItemProxy */;
+		};
+		9CBF7AABDCADE71F7EAA4B7DBB92180B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DTCircleProgressView;
+			target = 288AD9B0277C73CDE654D4128F684A8B /* DTCircleProgressView */;
+			targetProxy = 5815120704A6AB4E8664404C65861D09 /* PBXContainerItemProxy */;
+		};
+		CD4EF021B41633F610C30BC6DF38E142 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DTScrollPickerView;
+			target = 907F4C659D626A5D1CBE216C41524491 /* DTScrollPickerView */;
+			targetProxy = 2A7D17E5CC5B11D4AFBEA8BB3B6F60E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00785F8BEC962D3168D6122550AB1172 /* Release */ = {
+		07C2C2CAC1C11A3291E9CAC0764791AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9DEBA89BEEEA0C73314C84D57DED420 /* DTScrollPickerView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DTScrollPickerView/DTScrollPickerView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DTScrollPickerView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DTScrollPickerView/DTScrollPickerView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = DTScrollPickerView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		052942841B7AD2C9A4DDB28A5CF69967 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C363F4C1D84ABE569F19D20EE379DFCC /* Pods-DTScrollPickerView_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DTScrollPickerView_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DTScrollPickerView_Tests/Pods-DTScrollPickerView_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_DTScrollPickerView_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		06DF17FD50F460C9F9B79FE0F8814FFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6911978E9E1FD5897710F1CDEA9A3D0B /* Pods-DTScrollPickerView_Example.debug.xcconfig */;
+			baseConfigurationReference = 8CB5C3E22916635BD55458C0AB63F1F9 /* Pods-DTScrollPickerView_Example.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -526,17 +684,28 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-DTScrollPickerView_Example/Pods-DTScrollPickerView_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_DTScrollPickerView_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0CE7664E53A1B9A5D80DFAECD413EB0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF88F2BC89529158020E00667D7259D /* DTCircleProgressView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = DTCircleProgressView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -571,18 +740,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		16D54D66180F0AAE68D42C821E76C051 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9DEBA89BEEEA0C73314C84D57DED420 /* DTScrollPickerView.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = DTScrollPickerView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -625,37 +782,7 @@
 			};
 			name = Debug;
 		};
-		6A8AFC5837CD79F3C097DF9A8D9499EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CB5C3E22916635BD55458C0AB63F1F9 /* Pods-DTScrollPickerView_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DTScrollPickerView_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DTScrollPickerView_Example/Pods-DTScrollPickerView_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_DTScrollPickerView_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7C7E9A1568F9C481ED7C91A5BBEA4E5E /* Debug */ = {
+		694E51FAA9CB25CB846AE82346A9AFF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9DEBA89BEEEA0C73314C84D57DED420 /* DTScrollPickerView.xcconfig */;
 			buildSettings = {
@@ -667,7 +794,7 @@
 			};
 			name = Debug;
 		};
-		9350523F6721A5CC1E742919B76370C7 /* Debug */ = {
+		99B05E5E2E41D17DF6ED0F4C8092B674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9DEBA89BEEEA0C73314C84D57DED420 /* DTScrollPickerView.xcconfig */;
 			buildSettings = {
@@ -695,7 +822,46 @@
 			};
 			name = Debug;
 		};
-		B6F67667FBC15FE41C4F9D15F4C5BEF4 /* Debug */ = {
+		A02F3C88E91B87C39E506CF391D16344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9DEBA89BEEEA0C73314C84D57DED420 /* DTScrollPickerView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DTScrollPickerView/DTScrollPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DTScrollPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DTScrollPickerView/DTScrollPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DTScrollPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2B3DFF7448E68D0934374AC0358EA64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF88F2BC89529158020E00667D7259D /* DTCircleProgressView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = DTCircleProgressView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BF7A6E4455600937A3252860B90651CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 99027B33787F2B184B484E6888DAAA9B /* Pods-DTScrollPickerView_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -726,14 +892,142 @@
 			};
 			name = Debug;
 		};
+		CF470E1E07263FD4F27979BDDDD9670E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6911978E9E1FD5897710F1CDEA9A3D0B /* Pods-DTScrollPickerView_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DTScrollPickerView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DTScrollPickerView_Example/Pods-DTScrollPickerView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_DTScrollPickerView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0E1CFD5F5CD5A77C603CFFC8442B215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF88F2BC89529158020E00667D7259D /* DTCircleProgressView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DTCircleProgressView/DTCircleProgressView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DTCircleProgressView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DTCircleProgressView/DTCircleProgressView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DTCircleProgressView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3982FFA37FF8FB7038FBEF008C0A1C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9DEBA89BEEEA0C73314C84D57DED420 /* DTScrollPickerView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = DTScrollPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		F51058381968C9D7623FF3DF3C58BA08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C363F4C1D84ABE569F19D20EE379DFCC /* Pods-DTScrollPickerView_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DTScrollPickerView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DTScrollPickerView_Tests/Pods-DTScrollPickerView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_DTScrollPickerView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F7E4871EB942F218FED854F89C68ABDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF88F2BC89529158020E00667D7259D /* DTCircleProgressView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DTCircleProgressView/DTCircleProgressView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DTCircleProgressView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DTCircleProgressView/DTCircleProgressView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DTCircleProgressView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01EFD74258B270EBB861B6A34397002C /* Build configuration list for PBXNativeTarget "DTScrollPickerView-DTScrollPickerView" */ = {
+		023FD513604D5FEBF6DDA678C8C9049C /* Build configuration list for PBXNativeTarget "DTScrollPickerView-DTScrollPickerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C7E9A1568F9C481ED7C91A5BBEA4E5E /* Debug */,
-				16D54D66180F0AAE68D42C821E76C051 /* Release */,
+				694E51FAA9CB25CB846AE82346A9AFF3 /* Debug */,
+				D3982FFA37FF8FB7038FBEF008C0A1C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -747,29 +1041,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32425F438D1B14260496AAA0B2972322 /* Build configuration list for PBXNativeTarget "Pods-DTScrollPickerView_Tests" */ = {
+		596AA5CF6B9785159633A4A8296A2C36 /* Build configuration list for PBXNativeTarget "DTCircleProgressView-DTCircleProgressView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6F67667FBC15FE41C4F9D15F4C5BEF4 /* Debug */,
-				052942841B7AD2C9A4DDB28A5CF69967 /* Release */,
+				0CE7664E53A1B9A5D80DFAECD413EB0F /* Debug */,
+				A2B3DFF7448E68D0934374AC0358EA64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59E5CCE65CA68323497603D1B9F79F8D /* Build configuration list for PBXNativeTarget "Pods-DTScrollPickerView_Example" */ = {
+		87FBD7C4624F64BC483A4EB988784E58 /* Build configuration list for PBXNativeTarget "DTScrollPickerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06DF17FD50F460C9F9B79FE0F8814FFA /* Debug */,
-				6A8AFC5837CD79F3C097DF9A8D9499EE /* Release */,
+				99B05E5E2E41D17DF6ED0F4C8092B674 /* Debug */,
+				A02F3C88E91B87C39E506CF391D16344 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D64C0B39E74032F4ACAA43332EB68C7A /* Build configuration list for PBXNativeTarget "DTScrollPickerView" */ = {
+		B5942C7A3EDC63B2328497AB2A7901ED /* Build configuration list for PBXNativeTarget "DTCircleProgressView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9350523F6721A5CC1E742919B76370C7 /* Debug */,
-				00785F8BEC962D3168D6122550AB1172 /* Release */,
+				F7E4871EB942F218FED854F89C68ABDC /* Debug */,
+				D0E1CFD5F5CD5A77C603CFFC8442B215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C49918B828A825B8EF5560CC2B35F658 /* Build configuration list for PBXNativeTarget "Pods-DTScrollPickerView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7A6E4455600937A3252860B90651CB /* Debug */,
+				F51058381968C9D7623FF3DF3C58BA08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD53890E4740FF83C4F6FFE3007B98B3 /* Build configuration list for PBXNativeTarget "Pods-DTScrollPickerView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF470E1E07263FD4F27979BDDDD9670E /* Debug */,
+				07C2C2CAC1C11A3291E9CAC0764791AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

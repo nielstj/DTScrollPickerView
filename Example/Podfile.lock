@@ -1,5 +1,7 @@
 PODS:
-  - DTScrollPickerView (0.1.0)
+  - DTCircleProgressView (0.1.1)
+  - DTScrollPickerView (0.1.0):
+    - DTCircleProgressView
 
 DEPENDENCIES:
   - DTScrollPickerView (from `../`)
@@ -9,6 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DTScrollPickerView: c024b1c0b283e71077dd221f780386d458f969e3
+  DTCircleProgressView: 5d94204242842257b6f0e7b8f7bbb2f9dde4c833
+  DTScrollPickerView: 00ee9ffdae291c3fd3156790229610b0fc1c7a3e
 
 COCOAPODS: 0.39.0

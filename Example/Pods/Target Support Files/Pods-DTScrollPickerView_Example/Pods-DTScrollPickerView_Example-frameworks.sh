@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-DTScrollPickerView_Example/DTCircleProgressView.framework"
   install_framework "Pods-DTScrollPickerView_Example/DTScrollPickerView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-DTScrollPickerView_Example/DTCircleProgressView.framework"
   install_framework "Pods-DTScrollPickerView_Example/DTScrollPickerView.framework"
 fi

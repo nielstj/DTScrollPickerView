@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '78D1252242BDCE25A0E27F99'
+               BlueprintIdentifier = '8F34819A57E7046CD6393422'
                BlueprintName = 'DTScrollPickerView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DTScrollPickerView.framework'>
