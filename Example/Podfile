@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'DTScrollPickerView_Example', :exclusive => true do
+  pod "DTScrollPickerView", :path => "../"
+end
+
+target 'DTScrollPickerView_Tests', :exclusive => true do
+  pod "DTScrollPickerView", :path => "../"
+
+  
+end
