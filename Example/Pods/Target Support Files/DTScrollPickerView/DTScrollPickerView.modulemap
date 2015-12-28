@@ -1,0 +1,6 @@
+framework module DTScrollPickerView {
+  umbrella header "DTScrollPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}

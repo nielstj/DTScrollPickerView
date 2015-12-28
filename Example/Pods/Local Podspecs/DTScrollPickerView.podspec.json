@@ -1,0 +1,25 @@
+{
+  "name": "DTScrollPickerView",
+  "version": "0.1.0",
+  "summary": "A short description of DTScrollPickerView.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/DTScrollPickerView",
+  "license": "MIT",
+  "authors": {
+    "Daniel Tjuatja": "daniel.tjuatja@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/DTScrollPickerView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "DTScrollPickerView": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

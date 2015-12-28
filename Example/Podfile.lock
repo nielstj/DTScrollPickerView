@@ -1,0 +1,14 @@
+PODS:
+  - DTScrollPickerView (0.1.0)
+
+DEPENDENCIES:
+  - DTScrollPickerView (from `../`)
+
+EXTERNAL SOURCES:
+  DTScrollPickerView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DTScrollPickerView: c024b1c0b283e71077dd221f780386d458f969e3
+
+COCOAPODS: 0.39.0
