@@ -21,9 +21,6 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        //scrollPicker.button.bgColor = UIColor.whiteColor()
-        scrollPicker.button.borderColor = UIColor.greenColor()
     }
     
     

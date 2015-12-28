@@ -73,11 +73,14 @@ public class DTCircleProgressView: UIView {
     
     @IBInspectable public var bgColor : UIColor = UIColor.clearColor()
     @IBInspectable public var borderColor : UIColor = UIColor.whiteColor()
+    @IBInspectable public var progressColor : UIColor = UIColor.purpleColor()
+    
+    
     @IBInspectable public var borderWidth : CGFloat = 1.0
     @IBInspectable public var borderAlpha : CGFloat = 1.0
     
     
-    @IBInspectable public var progressColor : UIColor = UIColor.purpleColor()
+    
     @IBInspectable public var progressAngle : Double = 100.0
     @IBInspectable public var progressRotationAngle : Double = 0.0
     @IBInspectable public var progressRotationStart : Double = 0.0
@@ -112,33 +115,40 @@ public class DTCircleProgressView: UIView {
     }
     
     
-    override public func drawRect(rect: CGRect) {
+    public override func drawRect(rect: CGRect) {
         
         let ctx = UIGraphicsGetCurrentContext()
 
+        
+        
+        // DRAW BORDER LINE
         CGContextSetLineWidth(ctx, borderWidth)
-        
         borderColor = borderColor.colorWithAlphaComponent(borderAlpha)
-        
         CGContextSetStrokeColorWithColor(ctx, borderColor.CGColor)
-        CGContextSetFillColorWithColor(ctx, bgColor.CGColor)
-        
+        CGContextSetFillColorWithColor(ctx, UIColor.clearColor().CGColor)
         let rect = bounds.insetBy(dx: borderWidth, dy: borderWidth)
         CGContextBeginPath(ctx)
         let newSize = min(rect.size.width, rect.size.height)
-        let newRect = CGRectMake(center.x - (newSize/2), center.y - (newSize/2), newSize, newSize)
+        let newRect = CGRectMake(borderWidth, borderWidth, newSize, newSize)
         CGContextAddEllipseInRect(ctx, newRect)
         CGContextDrawPath(ctx, .FillStroke)
         
         
+        // DRAW CIRCLE FILL
+        let ctxB = UIGraphicsGetCurrentContext()
+        CGContextSetLineWidth(ctxB, 0)
+        CGContextSetFillColorWithColor(ctxB, bgColor.CGColor)
+        let rectB = bounds.insetBy(dx: borderWidth * 1.5 , dy: borderWidth * 1.5)
+        CGContextBeginPath(ctxB)
+        let newSizeB = min(rectB.size.width, rectB.size.height)
+        let newRectB = CGRectMake(borderWidth * 1.5, borderWidth * 1.5, newSizeB, newSizeB)
+        CGContextAddEllipseInRect(ctx, newRectB)
+        CGContextDrawPath(ctxB, .FillStroke)
+        
         
         // DRAW PROGRESS BAR
-        
-        
         let startAngle = (progressAngle / 100.0) * M_PI - ((-progressRotationAngle / 100.0) * 2.0 + 0.5) * M_PI - (2.0 * M_PI) * (progressAngle / 100.0) * (100.0 - 100.0 * value / maxValue) / 100.0
         let endAngle = -(progressAngle / 100.0) * M_PI - ((progressRotationAngle / 100.0) * 2.0 + 0.5) * M_PI
-        
-        
         
         let arc = CGPathCreateMutable()
         CGPathAddArc(arc, nil, frame.width/2, frame.height/2, (min(frame.width, frame.height)/2) - borderWidth, CGFloat(startAngle + (M_PI * progressRotationStart / 100.0)), CGFloat(endAngle + (M_PI * progressRotationStart / 100.0)), true)

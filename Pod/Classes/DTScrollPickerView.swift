@@ -100,11 +100,31 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         }
     }
     
+    
+    
+    
+    @IBInspectable public var buttonFontColor : UIColor = UIColor.whiteColor() {
+        didSet  { button.fontColor = buttonFontColor }
+    }
+    @IBInspectable public var buttonFontName : String = "HelveticaNeue" {
+        didSet { button.fontName = buttonFontName }
+    }
+    
+    
+    @IBInspectable public var buttonBorderColor : UIColor = UIColor.blueColor() {
+        didSet { button.borderColor = buttonBorderColor }
+    }
+    @IBInspectable public var buttonProgressColor : UIColor = UIColor.purpleColor() {
+        didSet { button.progressColor = buttonProgressColor }
+    }
+    @IBInspectable public var buttonBorderAlpha : CGFloat = 1.0 {
+        didSet { button.borderAlpha = buttonBorderAlpha }
+    }
     @IBInspectable public var buttonBGColor : UIColor = UIColor.whiteColor() {
-        didSet {
-            button.borderColor = buttonBGColor
-            button.setNeedsDisplay()
-        }
+        didSet { button.bgColor = buttonBGColor }
+    }
+    @IBInspectable public var buttonBorderWidth : CGFloat = 5.0 {
+        didSet { button.borderWidth = buttonBorderWidth }
     }
     
     
@@ -136,6 +156,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     func setup() {
         self.layoutSubviews()
+        button.fontSize = button.frame.size.width/4
         deltaValue = maxValue - minValue
         tableView.reloadData()
         tableView.contentOffset = CGPointMake(0, (tableView.contentSize.height - self.view.frame.size.height)/2)
@@ -198,6 +219,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             let valueString = String.localizedStringWithFormat("%.02f", value, "%")
             button.valueString = valueString
             
+            //button.fontSize = ((1 - ratio) * (maxButtonFontSize - minButtonFontSize)) + minButtonFontSize
+            
             tableView.contentOffset = CGPoint(x: 0, y: (ratio * (tableView.contentSize.height - view.frame.size.height)))
             
             
@@ -205,6 +228,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             widthConstraint.constant = ((0.5 - ratio)) * CGFloat(buttonZoomRatio)
             button.setNeedsDisplay()
             button.layoutIfNeeded()
+            
+            button.fontSize = button.frame.size.width/4
             
             tableView.backgroundColor = UIColor.interpolateRGBColorFrom(maxColor, toColor: minColor, ratio: ratio)
             
@@ -274,11 +299,14 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             let valueString = String.localizedStringWithFormat("%.02f", value, "%")
             button.valueString = valueString
             
+            //button.fontSize = ((1 - ratio) * (maxButtonFontSize - minButtonFontSize)) + minButtonFontSize
+            
             button.setNeedsDisplay()
             verticalConstraint.constant = (ratio - 0.5) * (view.frame.size.height - button.frame.size.width)
             widthConstraint.constant = ((0.5 - ratio)) * CGFloat(buttonZoomRatio)
             button.layoutIfNeeded()
             
+            button.fontSize = button.frame.size.width/4
             tableView.backgroundColor = UIColor.interpolateRGBColorFrom(maxColor, toColor: minColor, ratio: ratio)
         }
     }
