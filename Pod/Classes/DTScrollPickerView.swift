@@ -58,7 +58,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     
     
-    @IBInspectable public var cellCount = 30 {
+    @IBInspectable public var cellCount : Int = 30 {
         didSet {
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 self.tableView.reloadData()
@@ -351,6 +351,12 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         
         
         for marker in dummyMarkers {
+            
+            
+            if marker.value < minValue || marker.value > maxValue {
+                return
+            }
+            
             let ratio = CGFloat((marker.value - minValue) / deltaValue)
             let actualHeight = tableView.contentSize.height - CELL_HEIGHT
             let posY = ((1 - ratio) * actualHeight) + CELL_HEIGHT/2
