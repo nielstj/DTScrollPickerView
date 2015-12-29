@@ -15,7 +15,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-Rh-F28" userLabel="Container">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-Sb-vWd" customClass="DTDashedLineView" customModule="DTScrollPickerView" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-Sb-vWd" customClass="DTDashedLineView" customModule="DTCircleProgressView">
                             <rect key="frame" x="0.0" y="62" width="600" height="2"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -23,10 +23,10 @@
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="value" red="0.53768150250000002" green="0.53768150250000002" blue="0.53768150250000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="dashedWidth">
-                                    <real key="value" value="5"/>
+                                    <real key="value" value="6"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
@@ -56,7 +56,7 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                     <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,9 +100,10 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="bottomMarkerLbl" destination="jT9-bs-8LZ" id="FvD-vD-SxY"/>
-                <outlet property="progressView" destination="HL5-fc-xS2" id="1Wd-e5-gWT"/>
-                <outlet property="topMarkerLbl" destination="kJb-Jp-s74" id="OFk-rG-5Uc"/>
+                <outlet property="bottomMarkerLbl" destination="jT9-bs-8LZ" id="EhE-4h-9ti"/>
+                <outlet property="dashedLine" destination="9kn-Sb-vWd" id="837-gf-gV5"/>
+                <outlet property="progressView" destination="HL5-fc-xS2" id="Zxu-mr-baU"/>
+                <outlet property="topMarkerLbl" destination="kJb-Jp-s74" id="kso-yq-MsJ"/>
             </connections>
             <point key="canvasLocation" x="312" y="105"/>
         </view>

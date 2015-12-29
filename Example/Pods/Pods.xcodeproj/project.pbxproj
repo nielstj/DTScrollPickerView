@@ -13,6 +13,7 @@
 		2D5D1AF0A623341386E6FE434A413A3A /* Pods-DTScrollPickerView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C33E091D4BC2A6F5914C6918A507531E /* Pods-DTScrollPickerView_Example-dummy.m */; };
 		2F1DEB876CB9B90677136522EEEBC07F /* Pods-DTScrollPickerView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA0A8514A66C4EA959F3CBD069A920B /* Pods-DTScrollPickerView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		493BFF74711EA7AB539B5CE1436C437A /* Pods-DTScrollPickerView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBCC59795BB8FEB63DE6F51FE86175BF /* Pods-DTScrollPickerView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		652F8FD21C3237D80030B410 /* DTDashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F8FD11C3237D80030B410 /* DTDashedLineView.swift */; };
 		7B5EBF829E14DB5F976175C2A646A1ED /* DTScrollMarkerView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 63A97B199FB45D4E0B4FEC1449617BCC /* DTScrollMarkerView.xib */; };
 		89752D45D3371D86B6FA1645316BE4A2 /* DTScrollPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80172D0A558ED7361D4A5DB9506F1407 /* DTScrollPickerView.swift */; };
 		8BA707ED8A1308793DF2FF44A31FFAEB /* DTCircleProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE8DCA837346762F335E01C8EFD0702 /* DTCircleProgressView.framework */; };
@@ -96,6 +97,7 @@
 		58B17DA73A75568DC3D8FA43B5A45E18 /* Pods-DTScrollPickerView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DTScrollPickerView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		63A97B199FB45D4E0B4FEC1449617BCC /* DTScrollMarkerView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = DTScrollMarkerView.xib; sourceTree = "<group>"; };
 		644DDDEBD7166E6C5F6590557C9588DD /* Pods-DTScrollPickerView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DTScrollPickerView_Tests.modulemap"; sourceTree = "<group>"; };
+		652F8FD11C3237D80030B410 /* DTDashedLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTDashedLineView.swift; sourceTree = "<group>"; };
 		6911978E9E1FD5897710F1CDEA9A3D0B /* Pods-DTScrollPickerView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTScrollPickerView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6C7809AA8287A4390AD36E3281D97641 /* DTScrollPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DTScrollPickerView-dummy.m"; sourceTree = "<group>"; };
 		6FE8DCA837346762F335E01C8EFD0702 /* DTCircleProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTCircleProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +263,7 @@
 		6586A9867E2EA16D1C6BBE6D4C8A16B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				652F8FD11C3237D80030B410 /* DTDashedLineView.swift */,
 				63A97B199FB45D4E0B4FEC1449617BCC /* DTScrollMarkerView.xib */,
 				80172D0A558ED7361D4A5DB9506F1407 /* DTScrollPickerView.swift */,
 				EF33A6582587BD067A0ABD1A98BE4D86 /* DTScrollPickerView.xib */,
@@ -607,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9CA21A45A8698BE1E872CD67BB9238 /* DTCircleProgressView-dummy.m in Sources */,
+				652F8FD21C3237D80030B410 /* DTDashedLineView.swift in Sources */,
 				E5CFBE4EDFB8DF0DA5DFD0A436E50A76 /* DTCircleProgressView.swift in Sources */,
 				DDF2BCC5A4891752097F12F97B93C471 /* DTCircleProgressView.xib in Sources */,
 			);

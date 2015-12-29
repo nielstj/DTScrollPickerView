@@ -11,6 +11,29 @@ import UIKit
 import DTCircleProgressView
 
 
+
+public struct DTScrollPickerMarker {
+    var value : Double = 0.0
+    var topMarker = ""
+    var bottomMarker = ""
+}
+
+protocol DTScrollPickerViewDelegate : class {
+    func ScrollPickerViewValueDidChange(scrollPicker : DTScrollPickerView, value : Double, unit : String?)
+}
+
+
+public class DTScrollMarkerView: UIView {
+    
+    @IBOutlet weak var topMarkerLbl : UILabel!
+    @IBOutlet weak var bottomMarkerLbl : UILabel!
+    @IBOutlet weak var progressView : DTCircleProgressView!
+    @IBOutlet weak var dashedLine : DTDashedLineView!
+    
+}
+
+
+
 @IBDesignable
 public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDelegate {
 
@@ -29,7 +52,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     var startPoint : CGPoint = CGPointMake(0, 0)
     var buttonStartPoint : CGPoint = CGPointMake(0, 0)
     var deltaValue : Double = 0.0
-    
+    var currentRatio : CGFloat = 0.0
+    var delegate : DTScrollPickerViewDelegate?
     
     
     
@@ -92,10 +116,12 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     @IBInspectable public var unitString : String? {
         didSet {
-            button.showUnit = true
-            button.valueString = unitString!
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                self.tableView.reloadData()
+            if unitString != nil {
+                button.showUnit = true
+                button.valueString = unitString!
+                dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -109,8 +135,6 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     @IBInspectable public var buttonFontName : String = "HelveticaNeue" {
         didSet { button.fontName = buttonFontName }
     }
-    
-    
     @IBInspectable public var buttonBorderColor : UIColor = UIColor.blueColor() {
         didSet { button.borderColor = buttonBorderColor }
     }
@@ -126,6 +150,11 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     @IBInspectable public var buttonBorderWidth : CGFloat = 5.0 {
         didSet { button.borderWidth = buttonBorderWidth }
     }
+    
+    
+    @IBInspectable public var markerBorderColor : UIColor = UIColor.whiteColor()
+    @IBInspectable public var markerFontColor : UIColor = UIColor.whiteColor()
+    @IBInspectable public var markerDashedLineColor : UIColor = UIColor.whiteColor()
     
     
     
@@ -156,10 +185,13 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     func setup() {
         self.layoutSubviews()
+        tableView.separatorInset = UIEdgeInsetsZero
         button.fontSize = button.frame.size.width/4
         deltaValue = maxValue - minValue
         tableView.reloadData()
         tableView.contentOffset = CGPointMake(0, (tableView.contentSize.height - self.view.frame.size.height)/2)
+        currentRatio = 0.5
+        drawMarkers(nil)
     }
     
     
@@ -199,43 +231,20 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             let deltaY = tPoint.y - startPoint.y
             let newPoint = CGPointMake(buttonStartPoint.x, buttonStartPoint.y + deltaY)
             
-            //button.center = newPoint
-            
-            let maxRadius = ((view.frame.size.width/4 + buttonZoomRatio/2) / 2)
-            let minRadius = ((view.frame.size.width/4 - buttonZoomRatio/2) / 2)
-            
-            let cPoint = newPoint.y - maxRadius
-            let cHeight = self.view.frame.size.height - maxRadius - minRadius
+            let cPoint = newPoint.y - (CELL_HEIGHT/2)
+            let cHeight = self.view.frame.size.height - CELL_HEIGHT
             var ratio = cPoint / cHeight
-            
-            //print("Ratio first : \(ratio)")
-            
             if ratio <= 0 { ratio = 0 }
             if ratio >= 1 { ratio = 1 }
             
-            //print("Ratio first : \(ratio)")
-            
-            let value = minValue + (Double(1 - ratio) * deltaValue)
-            let valueString = String.localizedStringWithFormat("%.02f", value, "%")
-            button.valueString = valueString
-            
-            //button.fontSize = ((1 - ratio) * (maxButtonFontSize - minButtonFontSize)) + minButtonFontSize
-            
-            tableView.contentOffset = CGPoint(x: 0, y: (ratio * (tableView.contentSize.height - view.frame.size.height)))
-            
-            
-            verticalConstraint.constant = (ratio - 0.5) * (view.frame.size.height - button.frame.size.width)
-            widthConstraint.constant = ((0.5 - ratio)) * CGFloat(buttonZoomRatio)
-            button.setNeedsDisplay()
-            button.layoutIfNeeded()
-            
-            button.fontSize = button.frame.size.width/4
-            
-            tableView.backgroundColor = UIColor.interpolateRGBColorFrom(maxColor, toColor: minColor, ratio: ratio)
+            updateWithRatio(ratio)
+            currentRatio = ratio
+            //button.fontSize = button.frame.size.width/4
             
         case .Ended, .Failed, .Cancelled:
             isPanning = false
             self.startPoint = self.button.center
+            sendValueToDelegate()
         default :
             break
         }
@@ -266,6 +275,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         let valueString = String.localizedStringWithFormat("%.02f", actualValue, "%")
         cell?.textLabel?.text = valueString
         cell?.backgroundColor = UIColor.clearColor()
+        cell?.layoutMargins = UIEdgeInsetsZero
+        cell?.preservesSuperviewLayoutMargins = false
         return cell!
     }
     
@@ -290,26 +301,88 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             let point = scrollView.contentOffset
             let size = scrollView.contentSize
             let screenSize = view.bounds.size
-            
             let actualHeight = size.height - screenSize.height
-            
-            
             let ratio = point.y / actualHeight
-            let value = minValue + deltaValue - (Double(ratio) * deltaValue)
-            let valueString = String.localizedStringWithFormat("%.02f", value, "%")
-            button.valueString = valueString
-            
-            //button.fontSize = ((1 - ratio) * (maxButtonFontSize - minButtonFontSize)) + minButtonFontSize
-            
-            button.setNeedsDisplay()
-            verticalConstraint.constant = (ratio - 0.5) * (view.frame.size.height - button.frame.size.width)
-            widthConstraint.constant = ((0.5 - ratio)) * CGFloat(buttonZoomRatio)
-            button.layoutIfNeeded()
-            
-            button.fontSize = button.frame.size.width/4
-            tableView.backgroundColor = UIColor.interpolateRGBColorFrom(maxColor, toColor: minColor, ratio: ratio)
+            updateWithRatio(ratio)
+            currentRatio = ratio
         }
     }
+    
+    public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        sendValueToDelegate()
+    }
+    
+    
+    
+    /*  CLASS METHODS  */
+    
+    func sendValueToDelegate() {
+        let value = minValue + (Double(1 - currentRatio) * deltaValue)
+        if delegate != nil {
+            
+            delegate?.ScrollPickerViewValueDidChange(self, value: value, unit: unitString!)
+        }
+        
+    }
+    
+    func updateWithRatio(ratio : CGFloat) {
+        let value = minValue + (Double(1 - ratio) * deltaValue)
+        let valueString = String.localizedStringWithFormat("%.02f", value, "%")
+        button.valueString = valueString
+        
+        if isPanning {
+            tableView.contentOffset = CGPoint(x: 0, y: (ratio * (tableView.contentSize.height - view.frame.size.height)))
+        }
+        
+        
+        verticalConstraint.constant = (ratio - 0.5) * (view.frame.size.height - CELL_HEIGHT)
+        widthConstraint.constant = ((0.5 - ratio)) * CGFloat(buttonZoomRatio)
+        button.setNeedsDisplay()
+        button.layoutIfNeeded()
+        button.fontSize = button.frame.size.width/4
+        tableView.backgroundColor = UIColor.interpolateRGBColorFrom(maxColor, toColor: minColor, ratio: ratio)
+    }
+    
+    
+    public func drawMarkers(markers : [DTScrollPickerMarker]?) {
+        
+        let dummyMarkers = [DTScrollPickerMarker(value: 48, topMarker: "Moderate", bottomMarker: "Low"),
+            DTScrollPickerMarker(value: 72, topMarker: "High", bottomMarker: "Moderate")]
+        
+        
+        for marker in dummyMarkers {
+            let ratio = CGFloat((marker.value - minValue) / deltaValue)
+            let actualHeight = tableView.contentSize.height - CELL_HEIGHT
+            let posY = ((1 - ratio) * actualHeight) + CELL_HEIGHT/2
+            let height = view.frame.size.width/4 + ((ratio - 0.5) * buttonZoomRatio)
+            
+            let bundle = NSBundle(forClass: self.dynamicType)
+            let nib = UINib(nibName: "DTScrollMarkerView", bundle: bundle)
+            let markerView = nib.instantiateWithOwner(self, options: nil)[0] as! DTScrollMarkerView
+            
+            markerView.frame = CGRectMake(0, posY - height/2, view.frame.size.width, height)
+            markerView.topMarkerLbl.text = marker.topMarker
+            markerView.bottomMarkerLbl.text = marker.bottomMarker
+            
+            markerView.progressView.valueString = "\(marker.value)"
+            if unitString != nil {
+                markerView.progressView.showUnit = true
+                markerView.progressView.valueUnit = unitString!
+            }
+            markerView.progressView.progressColor = markerBorderColor
+            markerView.progressView.fontColor = markerFontColor
+            markerView.progressView.fontSize = markerView.progressView.frame.size.width/6
+            markerView.progressView.bgColor = UIColor.interpolateRGBColorFrom(maxColor, toColor: minColor, ratio: CGFloat(1 - ratio))
+            
+            markerView.bottomMarkerLbl.textColor = markerFontColor
+            markerView.topMarkerLbl.textColor = markerFontColor
+            markerView.dashedLine.lineColor = markerDashedLineColor
+            
+            tableView.addSubview(markerView)
+        }
+    }
+
+    
     
     
     
