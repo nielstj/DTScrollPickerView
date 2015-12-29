@@ -18,7 +18,7 @@ public struct DTScrollPickerMarker {
     var bottomMarker = ""
 }
 
-protocol DTScrollPickerViewDelegate : class {
+public protocol DTScrollPickerViewDelegate : class {
     func ScrollPickerViewValueDidChange(scrollPicker : DTScrollPickerView, value : Double, unit : String?)
 }
 

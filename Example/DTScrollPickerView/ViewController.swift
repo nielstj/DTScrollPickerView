@@ -9,7 +9,7 @@
 import UIKit
 import DTScrollPickerView
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DTScrollPickerViewDelegate {
 
     @IBOutlet weak var scrollPicker : DTScrollPickerView!
     
@@ -29,5 +29,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func ScrollPickerViewValueDidChange(scrollPicker: DTScrollPickerView, value: Double, unit: String?) {
+        // do something
+    }
+    
 }
 
