@@ -191,7 +191,6 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         tableView.reloadData()
         tableView.contentOffset = CGPointMake(0, (tableView.contentSize.height - self.view.frame.size.height)/2)
         currentRatio = 0.5
-        drawMarkers(nil)
     }
     
     
@@ -344,13 +343,13 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    public func drawMarkers(markers : [DTScrollPickerMarker]?) {
+    public func drawMarkers( markers : [DTScrollPickerMarker]?) {
         
-        let dummyMarkers = [DTScrollPickerMarker(value: 48, topMarker: "Moderate", bottomMarker: "Low"),
-            DTScrollPickerMarker(value: 72, topMarker: "High", bottomMarker: "Moderate")]
+        if markers == nil {
+            return
+        }
         
-        
-        for marker in dummyMarkers {
+        for marker in markers! {
             
             
             if marker.value < minValue || marker.value > maxValue {
