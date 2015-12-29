@@ -42,7 +42,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HL5-fc-xS2" customClass="DTCircleView" customModule="DTScrollPickerView" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HL5-fc-xS2" customClass="DTCircleProgressView" customModule="DTCircleProgressView">
                             <rect key="frame" x="237" y="0.0" width="126" height="126"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
