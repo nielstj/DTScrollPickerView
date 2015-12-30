@@ -53,7 +53,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     var buttonStartPoint : CGPoint = CGPointMake(0, 0)
     var deltaValue : Double = 0.0
     var currentRatio : CGFloat = 0.0
-    var delegate : DTScrollPickerViewDelegate?
+    public var delegate : DTScrollPickerViewDelegate?
     
     
     
