@@ -32,6 +32,9 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
 
     func ScrollPickerViewValueDidChange(scrollPicker: DTScrollPickerView, value: Double, unit: String?) {
         // do something
+        
+        print("value : \(value) unit : \(unit)")
+        
     }
     
 }

@@ -118,7 +118,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         didSet {
             if unitString != nil {
                 button.showUnit = true
-                button.valueString = unitString!
+                button.valueUnit = unitString!
                 dispatch_async(dispatch_get_main_queue()) { () -> Void in
                     self.tableView.reloadData()
                 }
@@ -311,6 +311,11 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         sendValueToDelegate()
     }
     
+    public func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            sendValueToDelegate()
+        }
+    }
     
     
     /*  CLASS METHODS  */
@@ -318,8 +323,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     func sendValueToDelegate() {
         let value = minValue + (Double(1 - currentRatio) * deltaValue)
         if delegate != nil {
-            
-            delegate?.ScrollPickerViewValueDidChange(self, value: value, unit: unitString!)
+            delegate?.ScrollPickerViewValueDidChange(self, value: value, unit: unitString)
         }
         
     }
