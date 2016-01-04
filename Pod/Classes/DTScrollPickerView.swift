@@ -98,6 +98,9 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         }
     }
     
+    
+    @IBInspectable public var valueColor : UIColor = UIColor.blackColor()
+    
     @IBInspectable public var maxColor : UIColor = UIColor.clearColor() {
         didSet {
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
@@ -273,6 +276,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         let actualValue = minValue + (Double(cellCount - indexPath.row) * (deltaValue / Double(cellCount)))
         let valueString = String.localizedStringWithFormat("%.02f", actualValue, "%")
         cell?.textLabel?.text = valueString
+        cell?.textLabel?.textColor = valueColor
         cell?.backgroundColor = UIColor.clearColor()
         cell?.layoutMargins = UIEdgeInsetsZero
         cell?.preservesSuperviewLayoutMargins = false

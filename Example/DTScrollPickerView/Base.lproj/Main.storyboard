@@ -35,6 +35,9 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="minColor">
                                         <color key="value" red="0.99668482729999996" green="0.32549019610000002" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="valueColor">
+                                        <color key="value" red="0.98861665499999996" green="0.98861665499999996" blue="0.98861665499999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
