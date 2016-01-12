@@ -25,8 +25,12 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
         
         
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
+           
+            self.scrollPicker.minValue = 0
+            self.scrollPicker.maxValue = 0.5
+            
             self.scrollPicker.drawMarkers(markers)
-            self.scrollPicker.updateScrollWithValue(80)
+            self.scrollPicker.updateScrollWithValue(0.2)
             print(self.scrollPicker.currentValue)
         }
         

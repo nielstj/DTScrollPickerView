@@ -75,33 +75,25 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     @IBInspectable public var minValue : Double = 0.0 {
         didSet {
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                self.tableView.reloadData()
-            }
+            self.updateTable()
         }
     }
     
     @IBInspectable public var maxValue : Double = 0.0 {
         didSet {
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                self.tableView.reloadData()
-            }
+            self.updateTable()
         }
     }
     @IBInspectable public var buttonZoomRatio : CGFloat = 50.0 {
         didSet {
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                self.tableView.reloadData()
-            }
+            self.updateTable()
         }
     }
     
     
     @IBInspectable public var CELL_HEIGHT : CGFloat  = 100 {
         didSet {
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                self.tableView.reloadData()
-            }
+            self.updateTable()
         }
     }
     
@@ -110,17 +102,13 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     @IBInspectable public var maxColor : UIColor = UIColor.clearColor() {
         didSet {
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                self.tableView.reloadData()
-            }
+            self.updateTable()
         }
     }
     
     @IBInspectable public var minColor : UIColor = UIColor.clearColor() {
         didSet {
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                self.tableView.reloadData()
-            }
+            self.updateTable()
         }
     }
     
@@ -129,9 +117,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             if unitString != nil {
                 button.showUnit = true
                 button.valueUnit = unitString!
-                dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                    self.tableView.reloadData()
-                }
+                self.updateTable()
             }
         }
     }
@@ -202,6 +188,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         
     }
     
+    
+    
     func setup() {
         self.layoutSubviews()
         tableView.separatorInset = UIEdgeInsetsZero
@@ -211,6 +199,17 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         tableView.contentOffset = CGPointMake(0, (tableView.contentSize.height - self.view.frame.size.height)/2)
         currentRatio = 0.5
     }
+    
+    public func updateTable() {
+        deltaValue = maxValue - minValue
+        tableView.contentOffset = CGPointMake(0, (tableView.contentSize.height - self.view.frame.size.height)/2)
+        currentRatio = 0.5
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.tableView.reloadData()
+            self.updateScrollWithValue(self.currentValue)
+        }
+    }
+    
     
     
     func loadViewFromNib() -> UIView {

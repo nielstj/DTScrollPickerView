@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DTScrollPickerView"
-  s.version          = "0.1.9"
+  s.version          = "0.1.10"
   s.summary          = "A custom scroll picker view"
 
 # This description is used to generate tags and improve search results.
