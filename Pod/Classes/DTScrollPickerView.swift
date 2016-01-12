@@ -13,6 +13,13 @@ import DTCircleProgressView
 
 
 public struct DTScrollPickerMarker {
+    
+    public init(val : Double, top : String, bottom : String) {
+        value = val
+        bottomMarker = bottom
+        topMarker = top
+    }
+    
     var value : Double = 0.0
     var topMarker = ""
     var bottomMarker = ""
@@ -158,6 +165,15 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     @IBInspectable public var markerBorderColor : UIColor = UIColor.whiteColor()
     @IBInspectable public var markerFontColor : UIColor = UIColor.whiteColor()
     @IBInspectable public var markerDashedLineColor : UIColor = UIColor.whiteColor()
+    
+    
+    public var currentValue : Double {
+        get {
+            return minValue + (Double(1 - currentRatio) * deltaValue)
+        }
+    }
+    
+    
     
     
     
@@ -329,8 +345,17 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         if delegate != nil {
             delegate?.ScrollPickerViewValueDidChange(self, value: value, unit: unitString)
         }
-        
     }
+    
+    public func updateScrollWithValue(newValue : Double) {
+        if newValue < maxValue && newValue > minValue {
+            isPanning = true
+            currentRatio =  1 - CGFloat((newValue - minValue) / deltaValue)
+            updateWithRatio(currentRatio)
+            isPanning = false
+        }
+    }
+    
     
     func updateWithRatio(ratio : CGFloat) {
         let value = minValue + (Double(1 - ratio) * deltaValue)

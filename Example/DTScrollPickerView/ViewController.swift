@@ -8,6 +8,7 @@
 
 import UIKit
 import DTScrollPickerView
+//import DTScrollPickerMarker
 
 class ViewController: UIViewController, DTScrollPickerViewDelegate {
 
@@ -17,6 +18,17 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         scrollPicker.delegate = self
+        
+        let markers = [DTScrollPickerMarker(val : 10.0, top : "abc", bottom : "def"),
+            DTScrollPickerMarker(val : 30.0, top : "abc", bottom : "def"),
+            DTScrollPickerMarker(val : 40.0, top : "abc", bottom : "def")]
+        
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.scrollPicker.drawMarkers(markers)
+            self.scrollPicker.updateScrollWithValue(80)
+            print(self.scrollPicker.currentValue)
+        }
         
     }
 
@@ -34,6 +46,9 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
         // do something
         
         print("value : \(value) unit : \(unit)")
+        
+        
+        
         
     }
     
