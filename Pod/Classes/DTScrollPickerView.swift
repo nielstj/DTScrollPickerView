@@ -32,10 +32,10 @@ public protocol DTScrollPickerViewDelegate : class {
 
 public class DTScrollMarkerView: UIView {
     
-    @IBOutlet weak var topMarkerLbl : UILabel!
-    @IBOutlet weak var bottomMarkerLbl : UILabel!
-    @IBOutlet weak var progressView : DTCircleProgressView!
-    @IBOutlet weak var dashedLine : DTDashedLineView!
+    @IBOutlet public weak var topMarkerLbl : UILabel!
+    @IBOutlet public weak var bottomMarkerLbl : UILabel!
+    @IBOutlet public weak var progressView : DTCircleProgressView!
+    @IBOutlet public weak var dashedLine : DTDashedLineView!
     
 }
 
