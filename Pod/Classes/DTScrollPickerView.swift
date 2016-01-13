@@ -203,11 +203,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     public func updateTable() {
         deltaValue = maxValue - minValue
         tableView.contentOffset = CGPointMake(0, (tableView.contentSize.height - self.view.frame.size.height)/2)
-        currentRatio = 0.5
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            self.tableView.reloadData()
-            self.updateScrollWithValue(self.currentValue)
-        }
+        self.tableView.reloadData()
+        //self.updateScrollWithValue(self.currentValue)
     }
     
     
@@ -349,7 +346,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     public func updateScrollWithValue(newValue : Double) {
         if newValue < maxValue && newValue > minValue {
             isPanning = true
-            currentRatio =  1 - CGFloat((newValue - minValue) / deltaValue)
+            let ratio = CGFloat((newValue - minValue) / deltaValue)
+            currentRatio =  1 - ratio
             updateWithRatio(currentRatio)
             isPanning = false
         }
@@ -364,7 +362,6 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         if isPanning {
             tableView.contentOffset = CGPoint(x: 0, y: (ratio * (tableView.contentSize.height - view.frame.size.height)))
         }
-        
         
         verticalConstraint.constant = (ratio - 0.5) * (view.frame.size.height - CELL_HEIGHT)
         widthConstraint.constant = ((0.5 - ratio)) * CGFloat(buttonZoomRatio)

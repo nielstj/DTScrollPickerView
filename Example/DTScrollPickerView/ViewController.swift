@@ -19,15 +19,14 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         scrollPicker.delegate = self
         
-        let markers = [DTScrollPickerMarker(val : 10.0, top : "abc", bottom : "def"),
-            DTScrollPickerMarker(val : 30.0, top : "abc", bottom : "def"),
-            DTScrollPickerMarker(val : 40.0, top : "abc", bottom : "def")]
+        let markers = [DTScrollPickerMarker(val : 0.1, top : "abc", bottom : "def"),
+            DTScrollPickerMarker(val : 0.8, top : "abc", bottom : "def")]
         
         
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
            
             self.scrollPicker.minValue = 0
-            self.scrollPicker.maxValue = 0.5
+            self.scrollPicker.maxValue = 1.0
             
             self.scrollPicker.drawMarkers(markers)
             self.scrollPicker.updateScrollWithValue(0.2)
