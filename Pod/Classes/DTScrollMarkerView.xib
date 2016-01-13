@@ -15,7 +15,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-Rh-F28" userLabel="Container">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-Sb-vWd" customClass="DTDashedLineView" customModule="DTCircleProgressView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-Sb-vWd" customClass="DTDashedLineView" customModule="DTScrollPickerView" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="62" width="600" height="2"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>

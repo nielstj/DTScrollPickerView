@@ -13,7 +13,7 @@
 		2D5D1AF0A623341386E6FE434A413A3A /* Pods-DTScrollPickerView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C33E091D4BC2A6F5914C6918A507531E /* Pods-DTScrollPickerView_Example-dummy.m */; };
 		2F1DEB876CB9B90677136522EEEBC07F /* Pods-DTScrollPickerView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA0A8514A66C4EA959F3CBD069A920B /* Pods-DTScrollPickerView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		493BFF74711EA7AB539B5CE1436C437A /* Pods-DTScrollPickerView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBCC59795BB8FEB63DE6F51FE86175BF /* Pods-DTScrollPickerView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		652F8FD21C3237D80030B410 /* DTDashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F8FD11C3237D80030B410 /* DTDashedLineView.swift */; };
+		6543DA511C46314000A0AF8D /* DTDashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F8FD11C3237D80030B410 /* DTDashedLineView.swift */; };
 		7B5EBF829E14DB5F976175C2A646A1ED /* DTScrollMarkerView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 63A97B199FB45D4E0B4FEC1449617BCC /* DTScrollMarkerView.xib */; };
 		89752D45D3371D86B6FA1645316BE4A2 /* DTScrollPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80172D0A558ED7361D4A5DB9506F1407 /* DTScrollPickerView.swift */; };
 		8BA707ED8A1308793DF2FF44A31FFAEB /* DTCircleProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE8DCA837346762F335E01C8EFD0702 /* DTCircleProgressView.framework */; };
@@ -579,6 +579,7 @@
 				89752D45D3371D86B6FA1645316BE4A2 /* DTScrollPickerView.swift in Sources */,
 				FB75E4074A94E7EBCEA43D95813722EE /* DTScrollPickerView.xib in Sources */,
 				C5A63E05C36666B444C275FD3D8A59DA /* UIColor+Crossfade.swift in Sources */,
+				6543DA511C46314000A0AF8D /* DTDashedLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +611,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9CA21A45A8698BE1E872CD67BB9238 /* DTCircleProgressView-dummy.m in Sources */,
-				652F8FD21C3237D80030B410 /* DTDashedLineView.swift in Sources */,
 				E5CFBE4EDFB8DF0DA5DFD0A436E50A76 /* DTCircleProgressView.swift in Sources */,
 				DDF2BCC5A4891752097F12F97B93C471 /* DTCircleProgressView.xib in Sources */,
 			);
