@@ -29,7 +29,8 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
             self.scrollPicker.maxValue = 1.0
             
             self.scrollPicker.drawMarkers(markers)
-            self.scrollPicker.updateScrollWithValue(0.2)
+            //self.scrollPicker.updateScrollWithValue(0.2)
+            self.scrollPicker.updateScrollWithValue(0.2, animated: true)
             print(self.scrollPicker.currentValue)
         }
         
