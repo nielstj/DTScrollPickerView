@@ -312,7 +312,6 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
         if !isPanning {
-            
             let point = scrollView.contentOffset
             let size = scrollView.contentSize
             let screenSize = view.bounds.size
@@ -349,10 +348,11 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             let ratio = CGFloat((newValue - minValue) / deltaValue)
             currentRatio =  1 - ratio
             if animated {
-                UIView.animateWithDuration(0.5, animations: { () -> Void in
-                    self.updateWithRatio(self.currentRatio)
-                    self.layoutIfNeeded()
-                })
+                let size = tableView.contentSize
+                let screenSize = view.bounds.size
+                let actualHeight = size.height - screenSize.height
+                let currentHeight = currentRatio * actualHeight
+                tableView.setContentOffset(CGPointMake(0,currentHeight), animated: true)
             }
             else {
                 updateWithRatio(currentRatio)
