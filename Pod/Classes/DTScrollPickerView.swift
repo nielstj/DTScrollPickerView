@@ -84,6 +84,15 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             self.updateTable()
         }
     }
+    
+    
+    @IBInspectable public var decimals : Int = 1 {
+        didSet {
+            self.updateTable()
+        }
+    }
+    
+    
     @IBInspectable public var buttonZoomRatio : CGFloat = 50.0 {
         didSet {
             self.updateTable()
@@ -286,7 +295,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
         }
         let actualValue = minValue + (Double(cellCount - indexPath.row) * (deltaValue / Double(cellCount)))
-        let valueString = String.localizedStringWithFormat("%.02f", actualValue, "%")
+        let valueString = String.localizedStringWithFormat("%.0\(decimals)f", actualValue, "%")
         cell?.textLabel?.text = valueString
         cell?.textLabel?.textColor = valueColor
         cell?.backgroundColor = UIColor.clearColor()
@@ -364,7 +373,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     func updateWithRatio(ratio : CGFloat) {
         let value = minValue + (Double(1 - ratio) * deltaValue)
-        let valueString = String.localizedStringWithFormat("%.02f", value, "%")
+        let valueString = String.localizedStringWithFormat("%.0\(decimals)f", value, "%")
         button.valueString = valueString
         
         if isPanning {

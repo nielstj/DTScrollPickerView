@@ -41,6 +41,9 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="markerDashedLineColor">
                                         <color key="value" red="0.93396861210000004" green="0.93396861210000004" blue="0.93396861210000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="decimals">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
