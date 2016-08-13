@@ -17,8 +17,9 @@ extension UIColor {
         ratio = max(0, ratio)
         ratio = min(1, ratio)
         
-        let c1 = startColor.cgColor.components
-        let c2 = toColor.cgColor.components
+        
+        let c1 = startColor.cgColor.__unsafeComponents
+        let c2 = toColor.cgColor.__unsafeComponents
         
         let r = (c1?[0])! + ((c2?[0])! - (c1?[0])!) * ratio
         let g = (c1?[1])! + ((c2?[1])! - (c1?[1])!) * ratio

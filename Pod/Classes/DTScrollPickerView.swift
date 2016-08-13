@@ -107,15 +107,15 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    @IBInspectable public var valueColor : UIColor = UIColor.black()
+    @IBInspectable public var valueColor : UIColor = UIColor.black
     
-    @IBInspectable public var maxColor : UIColor = UIColor.clear() {
+    @IBInspectable public var maxColor : UIColor = UIColor.clear {
         didSet {
             self.updateTable()
         }
     }
     
-    @IBInspectable public var minColor : UIColor = UIColor.clear() {
+    @IBInspectable public var minColor : UIColor = UIColor.clear {
         didSet {
             self.updateTable()
         }
@@ -134,22 +134,22 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     
     
-    @IBInspectable public var buttonFontColor : UIColor = UIColor.white() {
+    @IBInspectable public var buttonFontColor : UIColor = UIColor.white {
         didSet  { button.fontColor = buttonFontColor }
     }
     @IBInspectable public var buttonFontName : String = "HelveticaNeue" {
         didSet { button.fontName = buttonFontName }
     }
-    @IBInspectable public var buttonBorderColor : UIColor = UIColor.blue() {
+    @IBInspectable public var buttonBorderColor : UIColor = UIColor.blue {
         didSet { button.borderColor = buttonBorderColor }
     }
-    @IBInspectable public var buttonProgressColor : UIColor = UIColor.purple() {
+    @IBInspectable public var buttonProgressColor : UIColor = UIColor.purple {
         didSet { button.progressColor = buttonProgressColor }
     }
     @IBInspectable public var buttonBorderAlpha : CGFloat = 1.0 {
         didSet { button.borderAlpha = buttonBorderAlpha }
     }
-    @IBInspectable public var buttonBGColor : UIColor = UIColor.white() {
+    @IBInspectable public var buttonBGColor : UIColor = UIColor.white {
         didSet { button.bgColor = buttonBGColor }
     }
     @IBInspectable public var buttonBorderWidth : CGFloat = 5.0 {
@@ -157,9 +157,9 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    @IBInspectable public var markerBorderColor : UIColor = UIColor.white()
-    @IBInspectable public var markerFontColor : UIColor = UIColor.white()
-    @IBInspectable public var markerDashedLineColor : UIColor = UIColor.white()
+    @IBInspectable public var markerBorderColor : UIColor = UIColor.white
+    @IBInspectable public var markerFontColor : UIColor = UIColor.white
+    @IBInspectable public var markerDashedLineColor : UIColor = UIColor.white
     
     
     public var currentValue : Double {
@@ -176,7 +176,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     
     func xibSetup() {
-        self.backgroundColor = UIColor.clear()
+        self.backgroundColor = UIColor.clear
         view = loadViewFromNib()
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
@@ -201,7 +201,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     func setup() {
         self.layoutSubviews()
-        tableView.separatorInset = UIEdgeInsetsZero
+        tableView.separatorInset = UIEdgeInsets.zero
         button.fontSize = button.frame.size.width/4
         deltaValue = maxValue - minValue
         tableView.reloadData()
@@ -298,8 +298,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         let valueString = String.localizedStringWithFormat("%.0\(decimals)f", actualValue, "%")
         cell?.textLabel?.text = valueString
         cell?.textLabel?.textColor = valueColor
-        cell?.backgroundColor = UIColor.clear()
-        cell?.layoutMargins = UIEdgeInsetsZero
+        cell?.backgroundColor = UIColor.clear
+        cell?.layoutMargins = UIEdgeInsets.zero
         cell?.preservesSuperviewLayoutMargins = false
         return cell!
     }

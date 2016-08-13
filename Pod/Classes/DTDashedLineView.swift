@@ -16,7 +16,7 @@ public class DTDashedLineView: UIView{
     
     
     
-    @IBInspectable public var lineColor : UIColor = UIColor.blue()
+    @IBInspectable public var lineColor : UIColor = UIColor.blue
     @IBInspectable public var dashedWidth : CGFloat = 10
     @IBInspectable public var isHorizontal : Bool = true
     

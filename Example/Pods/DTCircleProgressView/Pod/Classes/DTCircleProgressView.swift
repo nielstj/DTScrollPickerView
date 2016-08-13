@@ -22,7 +22,7 @@ public class DTCircleProgressView: UIView {
     }
     
     
-    @IBInspectable public var fontColor : UIColor = UIColor.white() {
+    @IBInspectable public var fontColor : UIColor = UIColor.white {
         didSet  { titleLbl.textColor = fontColor }
     }
     @IBInspectable public var fontSize : CGFloat = 15 {
@@ -45,10 +45,10 @@ public class DTCircleProgressView: UIView {
             
             
             var attr = [NSFontAttributeName :valueFont!]
-            let valueAttrStr = AttributedString(string: valueString as String, attributes: attr)
+            let valueAttrStr = NSAttributedString(string: valueString as String, attributes: attr)
             
             title.append(valueAttrStr)
-            title.append(AttributedString(string: "\n"))
+            title.append(NSAttributedString(string: "\n"))
             
             var unitFont = UIFont(name: fontName as String, size: fontSize * 0.5)
             if unitFont == nil {
@@ -57,7 +57,7 @@ public class DTCircleProgressView: UIView {
             
             
             attr = [NSFontAttributeName : unitFont!]
-            let unitAttrStr = AttributedString(string: valueUnit as String, attributes: attr)
+            let unitAttrStr = NSAttributedString(string: valueUnit as String, attributes: attr)
             
             title.append(unitAttrStr)
             
@@ -71,9 +71,10 @@ public class DTCircleProgressView: UIView {
         
     }
     
-    @IBInspectable public var bgColor : UIColor = UIColor.clear()
-    @IBInspectable public var borderColor : UIColor = UIColor.white()
-    @IBInspectable public var progressColor : UIColor = UIColor.purple()
+    @IBInspectable public var bgColor : UIColor = UIColor.clear
+    @IBInspectable public var borderColor : UIColor = UIColor.white
+    @IBInspectable public var progressColor : UIColor = UIColor.purple
+    
     
     
     @IBInspectable public var borderWidth : CGFloat = 1.0
@@ -125,7 +126,7 @@ public class DTCircleProgressView: UIView {
         ctx?.setLineWidth(borderWidth)
         borderColor = borderColor.withAlphaComponent(borderAlpha)
         ctx?.setStrokeColor(borderColor.cgColor)
-        ctx?.setFillColor(UIColor.clear().cgColor)
+        ctx?.setFillColor(UIColor.clear.cgColor)
         let rect = bounds.insetBy(dx: borderWidth, dy: borderWidth)
         ctx?.beginPath()
         let newSize = min(rect.size.width, rect.size.height)
@@ -158,7 +159,7 @@ public class DTCircleProgressView: UIView {
         
         ctx?.addPath(strokedArc!)
         ctx?.setFillColor(progressColor.cgColor)
-        ctx?.setStrokeColor(UIColor.clear().cgColor)
+        ctx?.setStrokeColor(UIColor.clear.cgColor)
         ctx?.drawPath(using: .fillStroke);
         
     }
