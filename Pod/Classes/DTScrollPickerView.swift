@@ -220,7 +220,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     func loadViewFromNib() -> UIView {
         
-        let bundle = Bundle(for: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "DTScrollPickerView", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options : nil)[0] as! UIView
         
@@ -407,7 +407,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             let posY = ((1 - ratio) * actualHeight) + CELL_HEIGHT/2
             let height = view.frame.size.width/4 + ((ratio - 0.5) * buttonZoomRatio)
             
-            let bundle = Bundle(for: self.dynamicType)
+            let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "DTScrollMarkerView", bundle: bundle)
             let markerView = nib.instantiate(withOwner: self, options: nil)[0] as! DTScrollMarkerView
             

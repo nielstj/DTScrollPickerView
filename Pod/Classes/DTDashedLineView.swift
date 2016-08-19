@@ -31,23 +31,23 @@ public class DTDashedLineView: UIView{
         context?.setLineWidth(frame.size.height)
         context?.setStrokeColor(lineColor.cgColor)
         let dashArray : [CGFloat] = [dashedWidth]
-        context?.setLineDash(phase: 1, lengths: dashArray , count: 1)
+        context?.setLineDash(phase: 1, lengths: dashArray)
         
         //CGContextMoveToPoint(context, 0, frame.size.height/2)
         if isHorizontal {
-            context?.moveTo(x: 0, y: frame.size.height/2)
-            context?.addLineTo(x: frame.size.width, y: frame.size.height/2)
+            context?.move(to: CGPoint(x: 0.0, y: frame.size.height/2.0))
+            context?.addLine(to: CGPoint(x: frame.size.width, y: frame.size.height/2.0))
         }
         else {
-            context?.moveTo(x: frame.size.width/2, y: 0)
-            context?.addLineTo(x: frame.size.width/2, y: frame.size.height)
+            context?.move(to: CGPoint(x: frame.size.width/2.0, y: 0.0))
+            context?.addLine(to: CGPoint(x: frame.size.width/2.0, y: frame.size.height))
         }
         context?.strokePath()
     }
     
     func loadViewFromNib() -> UIView {
         
-        let bundle = Bundle(for: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "HMTodayActivityView", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options : nil)[0] as! UIView
         
