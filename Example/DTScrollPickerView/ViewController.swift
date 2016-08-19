@@ -23,7 +23,7 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
             DTScrollPickerMarker(val : 0.8, top : "abc", bottom : "def")]
         
         
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+        DispatchQueue.main.async { () -> Void in
            
             self.scrollPicker.minValue = 0
             self.scrollPicker.maxValue = 1.0
@@ -36,7 +36,7 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
         
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
@@ -46,7 +46,7 @@ class ViewController: UIViewController, DTScrollPickerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func ScrollPickerViewValueDidChange(scrollPicker: DTScrollPickerView, value: Double, unit: String?) {
+    func ScrollPickerViewValueDidChange(_ scrollPicker: DTScrollPickerView, value: Double, unit: String?) {
         // do something
         
         print("value : \(value) unit : \(unit)")

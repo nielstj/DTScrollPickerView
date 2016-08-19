@@ -16,7 +16,7 @@ public class DTDashedLineView: UIView{
     
     
     
-    @IBInspectable public var lineColor : UIColor = UIColor.blueColor()
+    @IBInspectable public var lineColor : UIColor = UIColor.blue
     @IBInspectable public var dashedWidth : CGFloat = 10
     @IBInspectable public var isHorizontal : Bool = true
     
@@ -26,30 +26,30 @@ public class DTDashedLineView: UIView{
     var view : UIView!
     
     
-    override public func drawRect(rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetLineWidth(context, frame.size.height)
-        CGContextSetStrokeColorWithColor(context, lineColor.CGColor)
+        context?.setLineWidth(frame.size.height)
+        context?.setStrokeColor(lineColor.cgColor)
         let dashArray : [CGFloat] = [dashedWidth]
-        CGContextSetLineDash(context, 1, dashArray , 1)
+        context?.setLineDash(phase: 1, lengths: dashArray)
         
         //CGContextMoveToPoint(context, 0, frame.size.height/2)
         if isHorizontal {
-            CGContextMoveToPoint(context, 0, frame.size.height/2)
-            CGContextAddLineToPoint(context, frame.size.width, frame.size.height/2)
+            context?.move(to: CGPoint(x: 0.0, y: frame.size.height/2.0))
+            context?.addLine(to: CGPoint(x: frame.size.width, y: frame.size.height/2.0))
         }
         else {
-            CGContextMoveToPoint(context, frame.size.width/2, 0)
-            CGContextAddLineToPoint(context, frame.size.width/2, frame.size.height)
+            context?.move(to: CGPoint(x: frame.size.width/2.0, y: 0.0))
+            context?.addLine(to: CGPoint(x: frame.size.width/2.0, y: frame.size.height))
         }
-        CGContextStrokePath(context)
+        context?.strokePath()
     }
     
     func loadViewFromNib() -> UIView {
         
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "HMTodayActivityView", bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options : nil)[0] as! UIView
+        let view = nib.instantiate(withOwner: self, options : nil)[0] as! UIView
         
         return view
     }

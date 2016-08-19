@@ -26,7 +26,7 @@ public struct DTScrollPickerMarker {
 }
 
 public protocol DTScrollPickerViewDelegate : class {
-    func ScrollPickerViewValueDidChange(scrollPicker : DTScrollPickerView, value : Double, unit : String?)
+    func ScrollPickerViewValueDidChange(_ scrollPicker : DTScrollPickerView, value : Double, unit : String?)
 }
 
 
@@ -56,8 +56,8 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     var isPanning = false
     
-    var startPoint : CGPoint = CGPointMake(0, 0)
-    var buttonStartPoint : CGPoint = CGPointMake(0, 0)
+    var startPoint : CGPoint = CGPoint(x: 0, y: 0)
+    var buttonStartPoint : CGPoint = CGPoint(x: 0, y: 0)
     var deltaValue : Double = 0.0
     var currentRatio : CGFloat = 0.0
     public var delegate : DTScrollPickerViewDelegate?
@@ -67,7 +67,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     @IBInspectable public var cellCount : Int = 30 {
         didSet {
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            DispatchQueue.main.async { () -> Void in
                 self.tableView.reloadData()
             }
         }
@@ -107,15 +107,15 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    @IBInspectable public var valueColor : UIColor = UIColor.blackColor()
+    @IBInspectable public var valueColor : UIColor = UIColor.black
     
-    @IBInspectable public var maxColor : UIColor = UIColor.clearColor() {
+    @IBInspectable public var maxColor : UIColor = UIColor.clear {
         didSet {
             self.updateTable()
         }
     }
     
-    @IBInspectable public var minColor : UIColor = UIColor.clearColor() {
+    @IBInspectable public var minColor : UIColor = UIColor.clear {
         didSet {
             self.updateTable()
         }
@@ -134,22 +134,22 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     
     
-    @IBInspectable public var buttonFontColor : UIColor = UIColor.whiteColor() {
+    @IBInspectable public var buttonFontColor : UIColor = UIColor.white {
         didSet  { button.fontColor = buttonFontColor }
     }
     @IBInspectable public var buttonFontName : String = "HelveticaNeue" {
         didSet { button.fontName = buttonFontName }
     }
-    @IBInspectable public var buttonBorderColor : UIColor = UIColor.blueColor() {
+    @IBInspectable public var buttonBorderColor : UIColor = UIColor.blue {
         didSet { button.borderColor = buttonBorderColor }
     }
-    @IBInspectable public var buttonProgressColor : UIColor = UIColor.purpleColor() {
+    @IBInspectable public var buttonProgressColor : UIColor = UIColor.purple {
         didSet { button.progressColor = buttonProgressColor }
     }
     @IBInspectable public var buttonBorderAlpha : CGFloat = 1.0 {
         didSet { button.borderAlpha = buttonBorderAlpha }
     }
-    @IBInspectable public var buttonBGColor : UIColor = UIColor.whiteColor() {
+    @IBInspectable public var buttonBGColor : UIColor = UIColor.white {
         didSet { button.bgColor = buttonBGColor }
     }
     @IBInspectable public var buttonBorderWidth : CGFloat = 5.0 {
@@ -157,9 +157,9 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    @IBInspectable public var markerBorderColor : UIColor = UIColor.whiteColor()
-    @IBInspectable public var markerFontColor : UIColor = UIColor.whiteColor()
-    @IBInspectable public var markerDashedLineColor : UIColor = UIColor.whiteColor()
+    @IBInspectable public var markerBorderColor : UIColor = UIColor.white
+    @IBInspectable public var markerFontColor : UIColor = UIColor.white
+    @IBInspectable public var markerDashedLineColor : UIColor = UIColor.white
     
     
     public var currentValue : Double {
@@ -176,20 +176,20 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     
     func xibSetup() {
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         view = loadViewFromNib()
         view.frame = bounds
-        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         addSubview(view)
         
-        let panGesture = UIPanGestureRecognizer(target: self, action: "pan:")
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(pan(_:)))
         button.addGestureRecognizer(panGesture)
         buttonStartPoint = button.center
         
         deltaValue = maxValue - minValue
         button.value = 1
         button.maxValue = 1
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+        DispatchQueue.main.async { () -> Void in
             self.setup()
         }
         
@@ -201,17 +201,17 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     func setup() {
         self.layoutSubviews()
-        tableView.separatorInset = UIEdgeInsetsZero
+        tableView.separatorInset = UIEdgeInsets.zero
         button.fontSize = button.frame.size.width/4
         deltaValue = maxValue - minValue
         tableView.reloadData()
-        tableView.contentOffset = CGPointMake(0, (tableView.contentSize.height - self.view.frame.size.height)/2)
+        tableView.contentOffset = CGPoint(x: 0, y: (tableView.contentSize.height - self.view.frame.size.height)/2)
         currentRatio = 0.5
     }
     
     public func updateTable() {
         deltaValue = maxValue - minValue
-        tableView.contentOffset = CGPointMake(0, (tableView.contentSize.height - self.view.frame.size.height)/2)
+        tableView.contentOffset = CGPoint(x: 0, y: (tableView.contentSize.height - self.view.frame.size.height)/2)
         self.tableView.reloadData()
         self.updateScrollWithValue(self.currentValue, animated:false)
     }
@@ -220,9 +220,9 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     func loadViewFromNib() -> UIView {
         
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "DTScrollPickerView", bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options : nil)[0] as! UIView
+        let view = nib.instantiate(withOwner: self, options : nil)[0] as! UIView
         
         return view
     }
@@ -240,19 +240,19 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     /* PAN GESTURE HANDLER */
     
-    func pan(sender : UIPanGestureRecognizer) {
-        let tPoint = sender.locationInView(view)
+    func pan(_ sender : UIPanGestureRecognizer) {
+        let tPoint = sender.location(in: view)
         
         
         switch sender.state {
-        case .Began:
+        case .began:
             isPanning = true
             startPoint = tPoint
             buttonStartPoint = button.center
-        case .Changed:
+        case .changed:
             
             let deltaY = tPoint.y - startPoint.y
-            let newPoint = CGPointMake(buttonStartPoint.x, buttonStartPoint.y + deltaY)
+            let newPoint = CGPoint(x: buttonStartPoint.x, y: buttonStartPoint.y + deltaY)
             
             let cPoint = newPoint.y - (CELL_HEIGHT/2)
             let cHeight = self.view.frame.size.height - CELL_HEIGHT
@@ -264,7 +264,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             currentRatio = ratio
             //button.fontSize = button.frame.size.width/4
             
-        case .Ended, .Failed, .Cancelled:
+        case .ended, .failed, .cancelled:
             isPanning = false
             self.startPoint = self.button.center
             sendValueToDelegate()
@@ -278,47 +278,47 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     
     /* UITABLEVIEW DATA SOURCE */
     
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellCount + 1
     }
     
-    public func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
-    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0
     }
     
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell")
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
-        let actualValue = minValue + (Double(cellCount - indexPath.row) * (deltaValue / Double(cellCount)))
+        let actualValue = minValue + (Double(cellCount - (indexPath as NSIndexPath).row) * (deltaValue / Double(cellCount)))
         let valueString = String.localizedStringWithFormat("%.0\(decimals)f", actualValue, "%")
         cell?.textLabel?.text = valueString
         cell?.textLabel?.textColor = valueColor
-        cell?.backgroundColor = UIColor.clearColor()
-        cell?.layoutMargins = UIEdgeInsetsZero
+        cell?.backgroundColor = UIColor.clear
+        cell?.layoutMargins = UIEdgeInsets.zero
         cell?.preservesSuperviewLayoutMargins = false
         return cell!
     }
     
     
-    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CELL_HEIGHT
     }
     
     
     /* UITABLEVIEW DELEGATE */
     
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
     
     /* UISCROLLVIEW DELEGATE*/
   public   
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if !isPanning {
             let point = scrollView.contentOffset
@@ -331,11 +331,11 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         }
     }
     
-    public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         sendValueToDelegate()
     }
     
-    public func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
             sendValueToDelegate()
         }
@@ -351,7 +351,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
         }
     }
     
-    public func updateScrollWithValue(newValue : Double, animated : Bool) {
+    public func updateScrollWithValue(_ newValue : Double, animated : Bool) {
         if newValue < maxValue && newValue > minValue {
             isPanning = true
             let ratio = CGFloat((newValue - minValue) / deltaValue)
@@ -361,7 +361,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
                 let screenSize = view.bounds.size
                 let actualHeight = size.height - screenSize.height
                 let currentHeight = currentRatio * actualHeight
-                tableView.setContentOffset(CGPointMake(0,currentHeight), animated: true)
+                tableView.setContentOffset(CGPoint(x: 0,y: currentHeight), animated: true)
             }
             else {
                 updateWithRatio(currentRatio)
@@ -371,7 +371,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    func updateWithRatio(ratio : CGFloat) {
+    func updateWithRatio(_ ratio : CGFloat) {
         let value = minValue + (Double(1 - ratio) * deltaValue)
         let valueString = String.localizedStringWithFormat("%.0\(decimals)f", value, "%")
         button.valueString = valueString
@@ -389,7 +389,7 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    public func drawMarkers( markers : [DTScrollPickerMarker]?) {
+    public func drawMarkers( _ markers : [DTScrollPickerMarker]?) {
         
         if markers == nil {
             return
@@ -407,11 +407,11 @@ public class DTScrollPickerView: UIView, UITableViewDataSource, UITableViewDeleg
             let posY = ((1 - ratio) * actualHeight) + CELL_HEIGHT/2
             let height = view.frame.size.width/4 + ((ratio - 0.5) * buttonZoomRatio)
             
-            let bundle = NSBundle(forClass: self.dynamicType)
+            let bundle = Bundle(for: type(of: self))
             let nib = UINib(nibName: "DTScrollMarkerView", bundle: bundle)
-            let markerView = nib.instantiateWithOwner(self, options: nil)[0] as! DTScrollMarkerView
+            let markerView = nib.instantiate(withOwner: self, options: nil)[0] as! DTScrollMarkerView
             
-            markerView.frame = CGRectMake(0, posY - height/2, view.frame.size.width, height)
+            markerView.frame = CGRect(x: 0, y: posY - height/2, width: view.frame.size.width, height: height)
             markerView.topMarkerLbl.text = marker.topMarker
             markerView.bottomMarkerLbl.text = marker.bottomMarker
             
